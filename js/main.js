@@ -30,3 +30,22 @@ sliderElements.forEach(el => {
     let copy = el.querySelector('.flex').cloneNode(true);
     el.appendChild(copy);
 });
+
+
+//? TEMPORARY CODE ==========================
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual'; // or 'auto'
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const pos = sessionStorage.getItem("scrollPos");
+    if (pos) {
+        window.scrollTo(0, parseInt(pos) + 500);
+        sessionStorage.removeItem("scrollPos");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+    sessionStorage.setItem("scrollPos", window.scrollY);
+});
+//? TERMPORARY CODE ==========================
