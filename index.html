@@ -27,17 +27,19 @@
         }
     </style>
 
-    <!-- ? Local / Vanilla -->
-    <script src="js/main.js" defer></script>
+    <!-- ? Vanilla JS -->
+    <script src="/js/main.js"></script>
 </head>
 
-<body class="font-paragraph">
-    <header data-include-navbar></header>
+<body class="relative overflow-x-hidden">
 
-    <!-- Dynamic content will go here -->
-    <main id="app" class="min-h-screen"></main>
+    <header data-include="navbar.html"></header>
 
-    <footer data-include-footer></footer>
+    <main class="min-h-screen bg-gray-600 pt-20">
+        <h1>Your Content Here</h1>
+    </main>
+
+    <footer data-include="footer.html"></footer>
 </body>
 
 </html>
