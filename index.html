@@ -32,11 +32,44 @@
 </head>
 
 <body class="relative overflow-x-hidden">
-
     <header data-include="navbar.html"></header>
 
-    <main class="min-h-screen bg-gray-600 pt-20">
-        <h1>Your Content Here</h1>
+    <main class="min-h-screen bg-cst-black">
+        <div
+            class="relative min-h-screen container mx-auto flex flex-col px-4 justify-center items-center text-white isolate">
+
+            <img class="absolute top-0 h-96 w-screen -z-10" src="assets/decorations/bg-circle-mosh.png" alt="">
+
+            <section class="flex flex-col">
+                <h1
+                    class="text-3xl sm:text-4xl md:text-6xl font-semibold font-heading text-center leading-tight tracking-tighter mb-4">
+                    Level Up Your <br> <span class="text-primary">Game</span> with <i>Ease</i>
+                </h1>
+                <p class="font-display text-sm text-center text-gray-300">All your sports needs, just one click away.
+                </p>
+
+                <a href="#"
+                    class="flex items-center gap-3 font-display font-medium border-2 border-spacing-2 border-white rounded-full w-fit mx-auto mt-12 py-3 px-8 hover:bg-white hover:text-black transition">
+                    Get Started <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+
+            </section>
+
+            <div class="absolute bottom-0 w-screen -z-10">
+                <!-- Shadow gradient overlay -->
+                <div
+                    class="absolute top-0 inset-0 bg-gradient-to-b from-cst-black via-cst-black/30 to-transparent opacity-90">
+                </div>
+
+                <img class="bottom-0 w-screen opacity-15" src="assets/decorations/hero-background-decoration.png"
+                    alt="" />
+            </div>
+
+        </div>
     </main>
 
     <footer data-include="footer.html"></footer>
