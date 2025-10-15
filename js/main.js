@@ -19,3 +19,14 @@ async function loadPartials() {
 document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
 });
+
+// ?
+// ?  INFIITE LOGO SLIDER ANIMATION
+// ?
+
+const sliderElements = document.querySelectorAll('.animate-scroll');
+
+sliderElements.forEach(el => {
+    let copy = el.querySelector('.flex').cloneNode(true);
+    el.appendChild(copy);
+});
