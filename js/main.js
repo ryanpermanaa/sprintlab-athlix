@@ -18,5 +18,6 @@ async function loadPage(page) {
 // Initialize app
 document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
-    await loadPage("home"); // default page
+    // await loadPage("home"); // default page
+    await loadPage("event"); // default page
 });
