@@ -1,4 +1,4 @@
-// Load reusable partials (navbar, footer)
+// * Loading reusable partials (navbar, footer)
 async function loadPartials() {
     const includeElements = document.querySelectorAll("[data-include]");
 
@@ -18,12 +18,24 @@ async function loadPartials() {
 // Initialize app
 document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
+
+    // *
+    // *  NAVBAR FUNCTIONALITY
+    // *
+    const navbarElement = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbarElement.classList.add('scrolled');
+        } else {
+            navbarElement.classList.remove('scrolled');
+        }
+    });
 });
 
-// ?
-// ?  INFIITE LOGO SLIDER ANIMATION
-// ?
-
+// *
+// *  INFIITE LOGO SLIDER ANIMATION
+// *
 const sliderElements = document.querySelectorAll('.animate-scroll');
 
 sliderElements.forEach(el => {
