@@ -32,6 +32,58 @@ sliderElements.forEach(el => {
 });
 
 
+// ?
+// ?  HORIZONTAL PARALAX SCROLL ANIMATION
+// ?
+
+// content duplication
+const scrollParallaxElements = document.querySelectorAll("[data-scroll-parallax]");
+scrollParallaxElements.forEach(el => {
+    const children = Array.from(el.children);
+    const repeatCount = Math.ceil(window.innerWidth / 350);
+
+    for (let i = 0; i < repeatCount - 1; i++) {
+        children.forEach(child => {
+            const copy = child.cloneNode(true);
+            el.appendChild(copy);
+        });
+    }
+});
+
+// functioning parallax
+const sportlifeParallax = document.querySelector("#sportlife-parallax");
+const gamereadyParallax = document.querySelector("#gameready-parallax");
+
+const slPositionTop = sportlifeParallax.getBoundingClientRect().top + window.scrollY;
+const slHeight = sportlifeParallax.offsetHeight;
+
+const grPositionTop = gamereadyParallax.getBoundingClientRect().top + window.scrollY;
+const grHeight = gamereadyParallax.offsetHeight;
+
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    const isVisible_sl = scrollY + windowHeight > slPositionTop && scrollY < slPositionTop + slHeight;
+    const isVisible_gr = scrollY + windowHeight > grPositionTop && scrollY < grPositionTop + grHeight;
+
+    if (isVisible_sl) {
+        const offset_sl = (scrollY - slPositionTop) * -0.3;
+        sportlifeParallax.style.transform = `translateX(calc(${offset_sl}px - 20%))`;
+    }
+
+    if (isVisible_gr) {
+        const offset_gr = (scrollY - grPositionTop) * 0.3;
+        gamereadyParallax.style.transform = `translateX(calc(${offset_gr}px - 20%))`;
+    }
+});
+
+
+
+
+
+
+
 //? TEMPORARY CODE ==========================
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual'; // or 'auto'
