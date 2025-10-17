@@ -33,7 +33,7 @@ sliderElements.forEach(el => {
 
 
 // ?
-// ?  HORIZONTAL PARALAX SCROLL ANIMATION
+// ?  HORIZONTAL PARALLAX SCROLL ANIMATION
 // ?
 
 // content duplication
@@ -74,7 +74,7 @@ window.addEventListener('scroll', () => {
 
     if (isVisible_gr) {
         const offset_gr = (scrollY - grPositionTop) * 0.3;
-        gamereadyParallax.style.transform = `translateX(calc(${offset_gr}px - 20%))`;
+        gamereadyParallax.style.transform = `translateX(${offset_gr}px)`;
     }
 });
 
