@@ -28,7 +28,7 @@
     </style>
 
     <!-- ? Vanilla JS -->
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" defer></script>
 
 </head>
 
@@ -57,6 +57,243 @@
                 </section>
 
             </div>
+        </section>
+
+        <!-- ? FIELD LOCATION SECTION -->
+        <section class="relative container mx-auto py-18 px-8">
+
+            <!-- ? Upper Section -->
+            <div class="flex flex-wrap justify-between gap-6 mb-6 md:mb-10">
+                <div class="relative max-w-xl">
+                    <!-- decoration -->
+                    <div class="absolute -left-30 -top-30 -z-10">
+                        <img class="opacity-60" src="assets/decorations/line-rectangle-pattern.png" alt="">
+                    </div>
+
+                    <h2 class="font-heading text-3xl md:text-5xl font-semibold mb-4">
+                        Play Where <span class="text-secondary">Everyone</span> Plays
+                    </h2>
+                    <p class="font-body text-gray-600 max-w-lg">
+                        Join the crowd on our most booked venues and find various facilities that awaits you!
+                    </p>
+                </div>
+
+                <div class="flex items-end ml-auto gap-3">
+                    <button id="prevBtn"
+                        class="h-fit enabled:cursor-pointer p-2 border-2 border-black rounded-full enabled:hover:bg-black enabled:hover:text-white transition disabled:opacity-30 active:scale-95">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                        </svg>
+                    </button>
+
+                    <button id="nextBtn"
+                        class="h-fit enabled:cursor-pointer p-2 border-2 border-black rounded-full enabled:hover:bg-black enabled:hover:text-white transition disabled:opacity-30 active:scale-95">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+
+                    </button>
+                </div>
+            </div>
+
+            <!-- ? Lower Section -->
+            <div class="relative">
+
+                <style>
+                    .slider-track {
+                        transition: transform 0.3s ease-in-out;
+                    }
+
+                    .slider-item {
+                        width: 100%;
+                        margin-right: 5px;
+                    }
+
+                    @media (min-width: 640px) {
+                        .slider-item {
+                            width: calc(50% - 16px);
+                        }
+                    }
+
+                    @media (min-width: 1024px) {
+                        .slider-item {
+                            width: calc(33.333% - 16px);
+                        }
+                    }
+
+                    @media (min-width: 1280px) {
+                        .slider-item {
+                            width: calc(25% - 16px);
+                        }
+                    }
+                </style>
+
+                <!-- Slider Viewport -->
+                <div class="overflow-hidden rounded-md">
+                    <div id="sliderTrack" class="slider-track flex gap-4">
+
+                        <!-- Slide Items -->
+                        <div
+                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            <img class="absolute inset-0 object-cover object-center -z-20"
+                                src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
+                                alt="">
+
+                            <div
+                                class="opacity-0 group-hover:opacity-100 flex items-end justify-between gap-8 transition">
+                                <div class="">
+                                    <h3 class="font-display font-semibold text-2xl mb-4">Golf Field Bali</h3>
+                                    <p class="font-body font-light text-sm">
+                                        Golf Field Bali, is a new field that have so many facilities
+                                        to support every...
+                                    </p>
+                                </div>
+                                <a href="#"
+                                    class="h-fit cursor-pointer p-2 border-2 border-white rounded-full hover:bg-white hover:text-black transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            <img class="absolute inset-0 object-cover object-center -z-20"
+                                src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
+                                alt="">
+
+                            <div
+                                class="opacity-0 group-hover:opacity-100 flex items-end justify-between gap-8 transition">
+                                <div class="">
+                                    <h3 class="font-display font-semibold text-2xl mb-4">Golf Field Bali</h3>
+                                    <p class="font-body font-light text-sm">
+                                        Golf Field Bali, is a new field that have so many facilities
+                                        to support every...
+                                    </p>
+                                </div>
+                                <a href="#"
+                                    class="h-fit cursor-pointer p-2 border-2 border-white rounded-full hover:bg-white hover:text-black transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            <img class="absolute inset-0 object-cover object-center -z-20"
+                                src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
+                                alt="">
+
+                            <div
+                                class="opacity-0 group-hover:opacity-100 flex items-end justify-between gap-8 transition">
+                                <div class="">
+                                    <h3 class="font-display font-semibold text-2xl mb-4">Golf Field Bali</h3>
+                                    <p class="font-body font-light text-sm">
+                                        Golf Field Bali, is a new field that have so many facilities
+                                        to support every...
+                                    </p>
+                                </div>
+                                <a href="#"
+                                    class="h-fit cursor-pointer p-2 border-2 border-white rounded-full hover:bg-white hover:text-black transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            <img class="absolute inset-0 object-cover object-center -z-20"
+                                src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
+                                alt="">
+
+                            <div
+                                class="opacity-0 group-hover:opacity-100 flex items-end justify-between gap-8 transition">
+                                <div class="">
+                                    <h3 class="font-display font-semibold text-2xl mb-4">Golf Field Bali</h3>
+                                    <p class="font-body font-light text-sm">
+                                        Golf Field Bali, is a new field that have so many facilities
+                                        to support every...
+                                    </p>
+                                </div>
+                                <a href="#"
+                                    class="h-fit cursor-pointer p-2 border-2 border-white rounded-full hover:bg-white hover:text-black transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            <img class="absolute inset-0 object-cover object-center -z-20"
+                                src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
+                                alt="">
+
+                            <div
+                                class="opacity-0 group-hover:opacity-100 flex items-end justify-between gap-8 transition">
+                                <div class="">
+                                    <h3 class="font-display font-semibold text-2xl mb-4">Golf Field Bali</h3>
+                                    <p class="font-body font-light text-sm">
+                                        Golf Field Bali, is a new field that have so many facilities
+                                        to support every...
+                                    </p>
+                                </div>
+                                <a href="#"
+                                    class="h-fit cursor-pointer p-2 border-2 border-white rounded-full hover:bg-white hover:text-black transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div
+                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            <img class="absolute inset-0 object-cover object-center -z-20"
+                                src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
+                                alt="">
+
+                            <div
+                                class="opacity-0 group-hover:opacity-100 flex items-end justify-between gap-8 transition">
+                                <div class="">
+                                    <h3 class="font-display font-semibold text-2xl mb-4">Golf Field Bali</h3>
+                                    <p class="font-body font-light text-sm">
+                                        Golf Field Bali, is a new field that have so many facilities
+                                        to support every...
+                                    </p>
+                                </div>
+                                <a href="#"
+                                    class="h-fit cursor-pointer p-2 border-2 border-white rounded-full hover:bg-white hover:text-black transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="indicators" class="flex justify-center gap-2 mt-6"></div>
+            </div>
+
         </section>
 
     </main>
