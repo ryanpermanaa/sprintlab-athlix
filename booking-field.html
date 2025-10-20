@@ -318,19 +318,47 @@
                         </svg>
                     </div>
 
-                    <button
-                        class="flex justify-center items-center gap-2 bg-white border-2 border-gray-500 py-2 px-4 h-full text-md rounded-full transition-all outline-none font-body cursor-pointer">
-                        Filter <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                            stroke="currentColor" class="size-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                        </svg>
+                    <!-- ? Filter Dropdown -->
+                    <div class="relative inline-block">
+                        <button id="filterBtn" type="button"
+                            class="flex items-center gap-2 bg-white border-2 border-gray-500 py-2 px-4 rounded-full font-medium hover:bg-gray-50 cursor-pointer">
+                            Filter
+                            <svg id="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="3" stroke="currentColor" class="w-4 h-4 transition-transform">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
 
-                    </button>
+                        <div id="menu"
+                            class="hidden absolute right-0 mt-2 py-2 min-w-56 rounded bg-white shadow-lg border border-gray-200">
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sort By Latest</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sort By Rating</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Sorty By Price</a>
+                        </div>
+                    </div>
+
+                    <script>
+                        const btn = document.getElementById('filterBtn');
+                        const menu = document.getElementById('menu');
+                        const icon = document.getElementById('icon');
+
+                        btn.onclick = () => {
+                            menu.classList.toggle('hidden');
+                            icon.classList.toggle('rotate-180');
+                        };
+
+                        document.onclick = (e) => {
+                            if (!btn.contains(e.target)) {
+                                menu.classList.add('hidden');
+                                icon.classList.remove('rotate-180');
+                            }
+                        };
+                    </script>
                 </div>
             </div>
 
             <!--? Cards section -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 mb-12">
 
                 <!-- Cards items -->
                 <a href="#" class="group shadow-md rounded-lg hover:-translate-y-2 hover:shadow-lg transition">
@@ -817,6 +845,57 @@
                 </a>
 
             </div>
+
+            <!-- pagination -->
+            <ul class="flex justify-center gap-1 text-gray-900">
+                <li>
+                    <a href="#"
+                        class="grid size-9 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
+                        aria-label="Previous page">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"
+                        class="block size-9 rounded border border-gray-200 bg-gray-50 text-center text-lg/8 font-medium transition-colors hover:bg-gray-100">
+                        1
+                    </a>
+                </li>
+
+                <li
+                    class="block size-9 rounded border border-gray-200 bg-gray-200 text-center text-lg/8 font-medium text-black">
+                    2
+                </li>
+
+                <li>
+                    <a href="#"
+                        class="block size-9 rounded border border-gray-200 bg-gray-50 text-center text-lg/8 font-medium transition-colors hover:bg-gray-100">
+                        3
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"
+                        class="block size-9 rounded border border-gray-200 bg-gray-50 text-center text-lg/8 font-medium transition-colors hover:bg-gray-100">
+                        4
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#"
+                        class="grid size-9 place-content-center rounded border border-gray-200 transition-colors hover:bg-gray-50 rtl:rotate-180"
+                        aria-label="Next page">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
 
         </section>
 
