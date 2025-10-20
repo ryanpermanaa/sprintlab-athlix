@@ -37,8 +37,9 @@
     <header data-include="navbar.html"></header>
     <div class="top-0 left-0 relative h-[4.5rem] bg-cst-black w-full"></div>
 
-    <main class="container mx-auto px-4 md:px-8 min-h-screen pt-12 grid grid-cols-subgrid lg:grid-cols-7 gap-10 pb-16">
-        <section class="flex flex-col gap-8 col-span-5">
+    <main
+        class="container mx-auto px-4 md:px-8 min-h-screen pt-12 grid grid-cols-1 lg:grid-cols-7 gap-8 md:gap-10 pb-16">
+        <section class="flex flex-col gap-8 lg:col-span-5">
             <!-- Event Title -->
             <h1 class="text-4xl font-bold font-display">Bali Street Volleyball Tournament 2025</h1>
 
@@ -133,7 +134,7 @@
                 </iframe>
             </div>
         </section>
-        <section class="col-span-2 flex flex-col gap-10">
+        <section class="lg:col-span-2 flex flex-col gap-8 md:gap-10 w-full">
             <form class="w-full bg-gray-100 p-5 rounded-md flex flex-col gap-4" method="post">
                 <h3 class="text-xl font-semibold font-display">Request for Availability</h3>
                 <div class="w-full h-0.5 bg-gray-300"></div>
@@ -156,7 +157,8 @@
                 <div class="flex flex-col gap-2">
                     <label for="city" class="font-gray-600 font-display font-semibold text-base">Select City</label>
                     <select name="city" id="city"
-                        class="p-3 rounded-md bg-gray-200 font-gray-600 font-display text-base">
+                        class="p-3 rounded-md bg-gray-200 font-gray-600 font-display text-base focus:outline-none cursor-pointer">
+                        <option value="null">Select City</option>
                         <option value="Denpasar">Denpasar</option>
                         <option value="Kuta">Kuta</option>
                         <option value="Ubud">Ubud</option>
@@ -184,6 +186,7 @@
                     <div class="rounded-md overflow-hidden h-48">
                         <img src="/assets/img/banner/martins-zemlickis-NPFu4GfFZ7E-unsplash.jpg" alt="">
                     </div>
+                    <h3 class="font-medium">Bali Marathon 2025</h3>
                     <div class="flex gap-2 items-center">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -203,8 +206,9 @@
                 </div>
                 <div class="flex flex-col gap-3">
                     <div class="rounded-md overflow-hidden h-48">
-                        <img src="/assets/img/banner/martins-zemlickis-NPFu4GfFZ7E-unsplash.jpg" alt="">
+                        <img src="/assets/img/banner/abigail-keenan-8-s5QuUBtyM-unsplash.jpg" alt="">
                     </div>
+                    <h3 class="font-medium">Bali Soccer Mania 2025</h3>
                     <div class="flex gap-2 items-center">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -224,8 +228,9 @@
                 </div>
                 <div class="flex flex-col gap-3">
                     <div class="rounded-md overflow-hidden h-48">
-                        <img src="/assets/img/banner/martins-zemlickis-NPFu4GfFZ7E-unsplash.jpg" alt="">
+                        <img src="/assets/img/banner/muktasim-azlan-rjWfNR_AC5g-unsplash.jpg" alt="">
                     </div>
+                    <h3 class="font-medium">Bali Badminton 2025</h3>
                     <div class="flex gap-2 items-center">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
