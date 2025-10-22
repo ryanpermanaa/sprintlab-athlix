@@ -329,7 +329,7 @@
         </section>
 
         <!-- ? AVAILABLE SERVICES SECTION -->
-        <section class="relative container mx-auto px-8 py-16 overflow-hidden">
+        <section class="relative container mx-auto px-8 py-16">
 
             <div class="block absolute -left-36 -top-52 -z-10">
                 <img class="opacity-60 lg:opacity-100" src="assets/decorations/line-rectangle-pattern.png" alt="">
@@ -345,20 +345,22 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:[&>div]:odd:mt-8 lg:[&>div]:even:mb-8">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:[&>div]:odd:mt-8 lg:[&>div]:even:mb-8 [&>div]:min-h-60 xl:[&>div]:min-h-[20rem]">
 
                 <!-- ? 1. Court Booking -->
                 <div
-                    class="flex flex-col min-h-72 outline-2 border-black p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg hover:bg-secondary hover:text-white transition bg-white rounded-lg">
-                    <h3 class="text-2xl font-display font-bold leading-none mb-4">
+                    class="flex flex-col p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg bg-secondary text-white transition rounded-lg">
+                    <h3 class="text-3xl font-display font-bold leading-none mb-4">
                         Court <br>
-                        <span class="group-hover:text-primary">Booking</span>
+                        <span class="text-primary">Booking</span>
                     </h3>
-                    <p class="text-sm text-gray-600 group-hover:text-white font-body max-w-xs transition mb-4 md:mb-10">
+                    <p class="text-sm font-body max-w-xs transition mb-4 md:mb-10">
                         Find and book sports venues anytime, anywhere with just a few clicks.
                     </p>
-                    <a href="#" class="inline-block mt-auto w-fit p-2 bg-primary text-black rounded-full self-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                    <a href="#"
+                        class="inline-block mt-auto w-fit p-2 border-2 border-white text-white hover:bg-white hover:text-black rounded-full self-end transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
                             <path fill-rule="evenodd"
                                 d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
                                 clip-rule="evenodd" />
@@ -368,16 +370,17 @@
 
                 <!-- ? 2. Find a Coach -->
                 <div
-                    class="flex flex-col min-h-72 outline-2 border-black p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg hover:bg-primary hover:text-black transition bg-white rounded-lg">
-                    <h3 class="text-2xl font-display font-bold leading-none mb-4">
+                    class="flex flex-col p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg bg-primary text-black transition rounded-lg">
+                    <h3 class="text-3xl font-display font-bold leading-none mb-4">
                         Find a <br>
-                        <span class="group-hover:text-secondary">Coach</span>
+                        <span class="text-secondary">Coach</span>
                     </h3>
-                    <p class="text-sm text-gray-600 group-hover:text-black font-body max-w-xs transition mb-4 md:mb-10">
-                        Find and book sports venues anytime, anywhere with just a few clicks.
+                    <p class="text-sm font-body max-w-xs transition mb-4 md:mb-10">
+                        Connect with certified coaches to sharpen your skills and reach your goals.
                     </p>
-                    <a href="#" class="inline-block mt-auto w-fit p-2 bg-secondary text-white rounded-full self-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                    <a href="#"
+                        class="inline-block mt-auto w-fit p-2 border-2 border-black text-black hover:bg-black hover:text-white rounded-full self-end transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
                             <path fill-rule="evenodd"
                                 d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
                                 clip-rule="evenodd" />
@@ -385,18 +388,19 @@
                     </a>
                 </div>
 
-                <!-- ? 3. Find Opponentes -->
+                <!-- ? 3. Find Opponents -->
                 <div
-                    class="flex flex-col min-h-72 outline-2 border-black p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg hover:bg-secondary hover:text-white transition bg-white rounded-lg">
-                    <h3 class="text-2xl font-display font-bold leading-none mb-4">
+                    class="flex flex-col outline-2 border-black p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg bg-secondary text-white transition rounded-lg">
+                    <h3 class="text-3xl font-display font-bold leading-none mb-4">
                         Find <br>
-                        <span class="group-hover:text-primary">Opponents</span>
+                        <span class="text-primary">Opponents</span>
                     </h3>
-                    <p class="text-sm text-gray-600 group-hover:text-white font-body max-w-xs transition mb-4 md:mb-10">
+                    <p class="text-sm font-body max-w-xs transition mb-4 md:mb-10">
                         Match with players at your level and enjoy competitive or friendly games.
                     </p>
-                    <a href="#" class="inline-block mt-auto w-fit p-2 bg-primary text-black rounded-full self-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                    <a href="#"
+                        class="inline-block mt-auto w-fit p-2 border-2 border-white text-white hover:bg-white hover:text-black rounded-full self-end transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
                             <path fill-rule="evenodd"
                                 d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
                                 clip-rule="evenodd" />
@@ -406,22 +410,24 @@
 
                 <!-- ? 4. Sports Products -->
                 <div
-                    class="flex flex-col min-h-72 outline-2 border-black p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg hover:bg-primary hover:text-black transition bg-white rounded-lg">
-                    <h3 class="text-2xl font-display font-bold leading-none mb-4">
-                        Sports <br>
-                        <span class="group-hover:text-secondary">Products</span>
+                    class="flex flex-col p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg bg-primary text-black transition rounded-lg">
+                    <h3 class="text-3xl font-display font-bold leading-none mb-4">
+                        Sport <br>
+                        <span class="text-secondary">Products</span>
                     </h3>
-                    <p class="text-sm text-gray-600 group-hover:text-black font-body max-w-xs transition mb-4 md:mb-10">
+                    <p class="text-sm font-body max-w-xs transition mb-4 md:mb-10">
                         Discover gear, apparel, and accessories to support your training and matches.
                     </p>
-                    <a href="#" class="inline-block mt-auto w-fit p-2 bg-secondary text-white rounded-full self-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                    <a href="#"
+                        class="inline-block mt-auto w-fit p-2 border-2 border-black text-black hover:bg-black hover:text-white rounded-full self-end transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
                             <path fill-rule="evenodd"
                                 d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
                                 clip-rule="evenodd" />
                         </svg>
                     </a>
                 </div>
+
             </div>
 
         </section>
