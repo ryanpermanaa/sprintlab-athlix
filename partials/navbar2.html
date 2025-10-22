@@ -1,0 +1,55 @@
+<nav id="navbar2"
+    class="fixed top-0 py-4 px-8 w-full flex justify-between bg-cst-black shadow-md text-white h-[4.5rem] z-50 transition">
+    <section class="flex items-center gap-10">
+        <h1 class="font-heading font-semibold text-xl">Athlix</h1>
+        <ul class="hidden lg:flex font-display text-sm items-center gap-4 tracking-wide">
+            <li><a href="#" class="transition hover:text-primary">Browse</a></li>
+            <li><a href="#" class="transition hover:text-primary">Play together</a></li>
+            <li><a href="#" class="transition hover:text-primary">Event</a></li>
+        </ul>
+    </section>
+
+    <section class="flex gap-2">
+
+        <!-- ? Search Input -->
+        <div class="hidden lg:inline-block relative">
+            <input placeholder="What are you looking for?"
+                class="peer bg-slate-800 pl-12 pr-5 h-full text-sm font-display rounded-full w-64 transition-all focus:w-72 outline-none"
+                name="search" type="search" />
+            <svg class="size-5 absolute top-1/2 -translate-y-1/2 left-4 text-gray-500 peer-focus:text-primary transition-colors"
+                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                    stroke-linejoin="round" stroke-linecap="round"></path>
+            </svg>
+        </div>
+
+        <!-- ? Notification -->
+        <a href="#"
+            class="hidden sm:flex bg-slate-800 text-white p-2 justify-center items-center h-full aspect-square rounded-full hover:text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+            </svg>
+        </a>
+
+        <!-- ? Profile -->
+        <a href="#"
+            class="bg-secondary hidden sm:flex items-center gap-3 py-1 pl-3 pr-2 rounded-full hover:bg-secondary">
+            <p class="font-display text-sm tracking-wide">John Wick</p>
+            <img class="rounded-full object-cover object-center h-full aspect-square"
+                src="https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
+                alt="">
+        </a>
+
+        <!-- ? Mobile Hamburger -->
+        <button class="inline-block lg:hidden cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+    </section>
+</nav>

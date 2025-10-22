@@ -28,16 +28,38 @@
     </style>
 
     <!-- ? Vanilla JS -->
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" defer></script>
 
 </head>
 
 <body class="relative overflow-x-hidden">
 
-    <header data-include="navbar.html"></header>
+    <header data-include="navbar2.html"></header>
 
-    <main class="min-h-screen bg-gray-600 pt-20">
-        <h1>Your Content Here</h1>
+    <main class="min-h-screen pt-20">
+
+        <!-- ? PHOTOS SECTION -->
+        <section class="container mx-auto flex gap-3 py-10 min-h-[35rem]">
+            <!-- Left large image -->
+            <div class="flex-[8] rounded-md overflow-hidden relative group">
+                <img src="assets/img/indoor-swimming-arena.jpg" alt="Indoor swimming arena"
+                    class="absolute inset-0 w-full h-full object-cover transition-transform ease-in-out group-hover:scale-105" />
+            </div>
+
+            <!-- Right column -->
+            <div class="flex-[4] flex flex-col gap-3">
+                <div class="flex-1 rounded-md overflow-hidden relative group">
+                    <img src="assets/img/group-of-people-playing-basketball.jpg" alt="Basketball game"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform ease-in-out group-hover:scale-105" />
+                </div>
+                <div class="flex-1 rounded-md overflow-hidden relative group">
+                    <img src="assets/img/person-playing-badminton.jpg" alt="Badminton player"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform ease-in-out group-hover:scale-105" />
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
     <footer data-include="footer.html"></footer>
