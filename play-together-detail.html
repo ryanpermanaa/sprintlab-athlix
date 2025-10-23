@@ -25,6 +25,11 @@
             --font-display: 'Urbanist', sans-serif;
             --font-body: 'Poppins', sans-serif;
         }
+
+        .mask-gradient {
+            mask-image: linear-gradient(to left, black 40%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to left, black 40%, transparent 100%);
+        }
     </style>
 
     <!-- ? Vanilla JS -->
@@ -35,9 +40,128 @@
 <body class="relative overflow-x-hidden">
 
     <header data-include="navbar.html"></header>
+    <div class="top-0 left-0 relative h-[4.5rem] bg-cst-black w-full"></div>
 
-    <main class="min-h-screen bg-gray-600 pt-20">
-        <h1>Your Content Here</h1>
+    <main class="container mx-auto px-8 min-h-screen pt-12">
+        <section class="bg-cst-black w-full p-8 rounded-xl flex flex-col gap-20 relative overflow-hidden mb-13">
+            <div class="absolute -right-0.5 -top-1/2 w-96">
+                <img src="assets/img/banner/badminton-concept-with-racket-shuttlecock 2.png" alt=""
+                    class="mask-gradient">
+            </div>
+            <div class="absolute top-0 left-0 inset-0 opacity-70">
+                <img src="/assets/decorations/bg-circle-mosh-2.png" alt="" draggable="false">
+            </div>
+            <div class="flex flex-col gap-4 z-10">
+                <div class="flex gap-4 items-center">
+                    <div class="px-4 py-2 bg-primary font-display rounded-sm font-semibold">Badminton</div>
+                    <p class="font-display text-gray-300">Beginner - Advanced</p>
+                </div>
+                <h1 class="text-white text-4xl font-semibold">Laga Badminton Mania Bali 2025</h1>
+            </div>
+            <div class="flex gap-4 items-center z-10">
+                <div class="flex">
+                    <div class="w-10 h-10 bg-white rounded-full border border-primary"></div>
+                    <div class="-mx-2 w-10 h-10 bg-white rounded-full border border-primary"></div>
+                    <div class="w-10 h-10 bg-white rounded-full border border-primary"></div>
+                </div>
+                <p class="text-white font-display"><span class="font-bold">5</span> out of <span
+                        class="font-bold">10</span> people have joined</p>
+                <button class="px-3 py-2 bg-primary font-semibold rounded-sm flex gap-2 items-center cursor-pointer">
+                    View people
+                    <svg width="18" height="18" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.5 9.49488V3.74515C3.5 3.55523 3.56549 3.40349 3.69646 3.28995C3.82689 3.1764 3.97933 3.11963 4.15378 3.11963C4.20853 3.11963 4.2657 3.12685 4.32528 3.14131C4.38433 3.15524 4.44096 3.17666 4.49517 3.20556L9.19968 6.09552C9.29952 6.16261 9.37466 6.23951 9.42512 6.32622C9.47504 6.41241 9.5 6.51021 9.5 6.61963C9.5 6.72904 9.47504 6.82685 9.42512 6.91304C9.3752 6.99923 9.30005 7.07613 9.19968 7.14374L4.49517 10.0337C4.44096 10.0621 4.38379 10.0835 4.32367 10.098C4.26355 10.1124 4.20639 10.1196 4.15217 10.1196C3.97719 10.1196 3.82474 10.0629 3.69485 9.94931C3.56495 9.83577 3.5 9.68429 3.5 9.49488Z"
+                            fill="#262626" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section class="font-body grid grid-cols-3 gap-20">
+            <div class="col-span-2">
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-xl font-bold">About Playing Together Activities</h2>
+                    <p class="text-base text-justify text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Maxime eos odio ullam eaque, illum beatae
+                        eius iste nobis soluta? Numquam, commodi suscipit obcaecati, nam blanditiis incidunt rem optio
+                        soluta, sit quae et. Neque dolorem commodi consectetur doloremque nulla ratione eveniet beatae
+                        nemo,
+                        ducimus in optio, temporibus quisquam modi recusandae molestias est! Tenetur, voluptatum aliquid
+                        inventore dolores architecto voluptates? Neque, delectus. Repudiandae, dignissimos autem sequi
+                        voluptas facere animi! Optio tempora earum natus voluptates, ipsa inventore doloribus non
+                        perspiciatis dicta officia consequuntur fugit commodi ex esse error iste. Modi consequatur nulla
+                        voluptatem ratione doloribus, repellendus eos necessitatibus deleniti, delectus doloremque
+                        facilis
+                        quidem.</p>
+                </div>
+            </div>
+            <div class="col-span-1 font-display">
+                <div class="bg-cst-black p-5 flex flex-col gap-10 rounded-xl">
+                    <div class="flex flex-col gap-3">
+                        <div class="text-lg text-white font-display"><span
+                                class="text-3xl text-primary font-bold font-display">Rp 1.150.000</span>/member</div>
+                        <p class="text-base text-white">Only 5 slots left!</p>
+                        <div class="flex gap-2 items-center">
+                            <div class="text-primary">
+                                <svg width="28" height="28" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M21.3333 2.66666V7.99999V2.66666ZM10.6667 2.66666V7.99999V2.66666ZM28 16C28 10.972 28 8.45732 26.4373 6.89599C24.8747 5.33466 22.3613 5.33332 17.3333 5.33332H14.6667C9.63867 5.33332 7.124 5.33332 5.56267 6.89599C4.00133 8.45866 4 10.972 4 16V18.6667C4 23.6947 4 26.2093 5.56267 27.7707C7.12533 29.332 9.63867 29.3333 14.6667 29.3333M4 13.3333H28H4Z"
+                                        fill="currentColor" />
+                                    <path
+                                        d="M21.3333 2.66666V7.99999M10.6667 2.66666V7.99999M28 16C28 10.972 28 8.45732 26.4373 6.89599C24.8747 5.33466 22.3613 5.33332 17.3333 5.33332H14.6667C9.63867 5.33332 7.124 5.33332 5.56267 6.89599C4.00133 8.45866 4 10.972 4 16V18.6667C4 23.6947 4 26.2093 5.56267 27.7707C7.12533 29.332 9.63867 29.3333 14.6667 29.3333M4 13.3333H28"
+                                        stroke="#020223" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M24.3557 24.9347L22.6663 24V21.6893M27.9997 24C27.9997 25.4145 27.4378 26.771 26.4376 27.7712C25.4374 28.7714 24.0808 29.3333 22.6663 29.3333C21.2519 29.3333 19.8953 28.7714 18.8951 27.7712C17.8949 26.771 17.333 25.4145 17.333 24C17.333 22.5855 17.8949 21.2289 18.8951 20.2288C19.8953 19.2286 21.2519 18.6667 22.6663 18.6667C24.0808 18.6667 25.4374 19.2286 26.4376 20.2288C27.4378 21.2289 27.9997 22.5855 27.9997 24Z"
+                                        fill="#020223" />
+                                    <path
+                                        d="M24.3557 24.9347L22.6663 24V21.6893M27.9997 24C27.9997 25.4145 27.4378 26.771 26.4376 27.7712C25.4374 28.7714 24.0808 29.3333 22.6663 29.3333C21.2519 29.3333 19.8953 28.7714 18.8951 27.7712C17.8949 26.771 17.333 25.4145 17.333 24C17.333 22.5855 17.8949 21.2289 18.8951 20.2288C19.8953 19.2286 21.2519 18.6667 22.6663 18.6667C24.0808 18.6667 25.4374 19.2286 26.4376 20.2288C27.4378 21.2289 27.9997 22.5855 27.9997 24Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-0 font-body">
+                                <h4 class="text-base text-white">Date</h4>
+                                <p class="text-sm text-gray-400">Saturday, 18 April 2025</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <div class="text-primary">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM12 4C9.87827 4 7.84344 4.84285 6.34315 6.34315C4.84285 7.84344 4 9.87827 4 12C4 14.1217 4.84285 16.1566 6.34315 17.6569C7.84344 19.1571 9.87827 20 12 20C14.1217 20 16.1566 19.1571 17.6569 17.6569C19.1571 16.1566 20 14.1217 20 12C20 9.87827 19.1571 7.84344 17.6569 6.34315C16.1566 4.84285 14.1217 4 12 4ZM12 6C12.2449 6.00003 12.4813 6.08996 12.6644 6.25272C12.8474 6.41547 12.9643 6.63975 12.993 6.883L13 7V11.586L15.707 14.293C15.8863 14.473 15.9905 14.7144 15.9982 14.9684C16.006 15.2223 15.9168 15.4697 15.7488 15.6603C15.5807 15.8508 15.3464 15.9703 15.0935 15.9944C14.8406 16.0185 14.588 15.9454 14.387 15.79L14.293 15.707L11.293 12.707C11.1376 12.5514 11.0378 12.349 11.009 12.131L11 12V7C11 6.73478 11.1054 6.48043 11.2929 6.29289C11.4804 6.10536 11.7348 6 12 6Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-0 font-body">
+                                <h4 class="text-base text-white">Time</h4>
+                                <p class="text-sm text-gray-400">18.00 - 19.00 WITA</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <div class="text-primary">
+                                <img src="assets/img/persons/person3.png" alt="">
+                            </div>
+                            <div class="flex flex-col gap-0 font-body">
+                                <h4 class="text-base text-white">Organizer</h4>
+                                <p class="text-sm text-gray-400">Kang Pacul</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="text-white flex gap-3 items-center justify-center w-full font-display border border-white rounded-md bg-transparent p-3 hover:bg-white hover:text-cst-black transition-colors duration-300 cursor-pointer">
+                        <span class="text-lg">Join Play Together</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.6562 11.3984L11.3672 12.1016L7.51562 15.9531L3.65625 12.1016L4.36719 11.3984L7.00781 14.0391L7 0.0234375H8L8.00781 14.0469L10.6562 11.3984Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer data-include="footer.html"></footer>
