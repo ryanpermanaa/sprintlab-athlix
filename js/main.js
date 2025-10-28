@@ -79,6 +79,46 @@ window.addEventListener('scroll', () => {
 });
 
 
+// ?
+// ?  FAQ BUTTON FUNCTIONALITY
+// ?
+const faqBtn = document.querySelectorAll('.faq-btn');
+
+toggleFaq(faqBtn[0]);
+
+function toggleFaq(button) {
+    // when triggered by event, `button` will be the Event object
+    if (button instanceof Event) {
+        button = button.currentTarget;
+    }
+
+    // collapse other FAQs
+    faqBtn.forEach(btn => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('svg');
+
+        if (btn !== button) {
+            content.style.maxHeight = null;
+            icon.classList.remove('rotate-180');
+        }
+    });
+
+    const content = button.nextElementSibling;
+    const icon = button.querySelector('svg');
+
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+    }
+
+    icon.classList.toggle('rotate-180');
+}
+
+faqBtn.forEach(btn => {
+    btn.addEventListener('click', toggleFaq);
+});
+
 
 
 
