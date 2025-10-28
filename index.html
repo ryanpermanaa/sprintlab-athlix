@@ -480,9 +480,9 @@
         </section>
 
         <!-- ? HIGHLIGHT VIDEO SECTION -->
-        <section class="bg-cst-black">
+        <section class="bg-cst-black overflow-hidden">
             <div
-                class="relative container mx-auto flex flex-col md:flex-row justify-center gap-10 md:gap-16 py-16 px-8 text-white isolate">
+                class="relative container mx-auto flex flex-col md:flex-row justify-center gap-10 md:gap-16 py-16 px-8 text-white isolate ">
 
                 <!-- text section -->
                 <div class="flex flex-col justify-between">
@@ -507,7 +507,7 @@
                 </div>
 
                 <!-- decoration -->
-                <img class="absolute top-44 -left-72 -z-10 opacity-30" src="assets/decorations/bg-circle-mosh-full.png">
+                <img class="absolute top-0 -left-72 -z-10 opacity-30" src="assets/decorations/bg-circle-mosh-full.png">
 
                 <!-- video section -->
                 <div class="relative flex-6 h-full">
@@ -519,6 +519,100 @@
                     <div class="bg-gray-500 aspect-video w-full rounded-md"></div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- ? USAGE TUTORIAL SECTION -->
+        <section class="container mx-auto px-8 py-10">
+            <p class="font-display italic text-xl font-semibold mb-3">
+                How to Use <span class="text-secondary">Athlix</span>
+            </p>
+            <h2 class="font-heading text-3xl font-semibold max-w-xl mb-6">
+                See how easy it is to turn your sports plans into action
+            </h2>
+
+            <!-- steps -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-18">
+                <div class="flex gap-4">
+                    <p class="font-heading font-medium text-3xl text-gray-400 mt-2 mr-1.5 italic">1.</p>
+                    <div class="">
+                        <h3 class="font-display font-bold text-xl mb-2">
+                            Create your Account
+                        </h3>
+                        <p class="font-body">
+                            Sign up for free and set up your profile — choose your favorite sports and
+                            skill level.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <p class="font-heading font-medium text-3xl text-gray-400 mt-2 italic">2.</p>
+                    <div class="">
+                        <h3 class="font-display font-bold text-xl mb-2">
+                            Find what you need
+                        </h3>
+                        <p class="font-body">
+                            Search for venues, coaches, or opponents that match your preferences and location.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <p class="font-heading font-medium text-3xl text-gray-400 mt-2 italic">3.</p>
+                    <div class="">
+                        <h3 class="font-display font-bold text-xl mb-2">
+                            Book or Connect
+                        </h3>
+                        <p class="font-body">
+                            Reserve your court, hire a coach, or challenge another player directly through the platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <p class="font-heading font-medium text-3xl text-gray-400 mt-2 italic">4.</p>
+                    <div class="">
+                        <h3 class="font-display font-bold text-xl mb-2">
+                            Play & Enjoy
+                        </h3>
+                        <p class="font-body">
+                            Show up, play your best, and let Athlix handle the rest — simple, fast, and fun.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- photos decoration -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-2.5 [&>div>div]:rounded-md [&_img]:hover:scale-105 [&_img]:transition">
+                <div class="flex flex-col gap-2.5">
+                    <div class="relative h-80 w-full overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center" src="assets/img/tennis.jpg"
+                            alt="">
+                    </div>
+                    <div class="relative h-80 md:h-60 w-full overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center"
+                            src="assets/img/competitive-running.jpg" alt="">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                    <div class="relative h-80 md:h-100 w-full overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center"
+                            src="assets/img/rock-climbing.jpg" alt="">
+                    </div>
+                    <div class="relative hidden md:block w-full flex-1 overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center" src="assets/img/soccer-sport.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                    <div class="relative hidden md:block h-60 w-full overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center" src="assets/img/deadlift.jpg"
+                            alt="">
+                    </div>
+                    <div class="relative hidden md:block w-full flex-1 overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center"
+                            src="assets/img/basketball-sport.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </section>
 
