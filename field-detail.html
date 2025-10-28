@@ -26,6 +26,12 @@
             --font-body: 'Poppins', sans-serif;
         }
     </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 6rem;
+        }
+    </style>
 
     <!-- ? Vanilla JS -->
     <script src="/js/main.js" defer></script>
@@ -53,10 +59,10 @@
                     <img src="assets/img/group-of-people-playing-basketball.jpg" alt="Basketball game"
                         class="absolute inset-0 w-full h-full object-cover transition-transform ease-in-out group-hover:scale-105" />
                 </div>
-                <div class="flex-1 rounded-xl overflow-hidden relative group">
+                <div class="flex-1 rounded-xl overflow-hidden relative group cursor-pointer">
                     <!-- 10+ Overlay -->
                     <div
-                        class="font-display font-medium tracking-wider text-3xl absolute inset-0 bg-black/40 text-white flex justify-center items-center z-10">
+                        class="font-display font-medium tracking-wider text-3xl absolute inset-0 bg-black/40 text-white flex justify-center items-center z-10 cursor-pointer">
                         +5 more</div>
 
                     <img src="assets/img/person-playing-badminton.jpg" alt="Badminton player"
@@ -233,7 +239,7 @@
                         Rp 100.000
                         <span class="text-xl font-normal text-gray-300">/ hr</span>
                     </p>
-                    <a href="#"
+                    <a href="#booking-schedule"
                         class="flex justify-center items-center py-2 px-6 gap-2 rounded-md border-2 border-white font-semibold hover:bg-white hover:text-black transition">
                         Check Availability <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="size-4">
@@ -248,7 +254,7 @@
 
         <!-- ? BOOKING INFORMATION -->
         <section class="container mx-auto px-8 pb-10">
-            <h2 class="font-display font-semibold text-2xl mb-4">
+            <h2 class="font-display font-semibold text-2xl mb-4" id="booking-schedule">
                 Booking Schedule
             </h2>
 
@@ -302,6 +308,9 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- divider -->
+                <div class="h-full w-0.5 mx-2 bg-gray-300"></div>
 
                 <!-- date picker -->
                 <div
@@ -397,7 +406,7 @@
                     <p class="text-2xl font-bold text-center">21:00 - 22:00</p>
                     <p class="text-lg font-bold text-gray-600 text-center">Rp. 100.000</p>
                 </button>
-                <button disabled class="text-center bg-gray-200 p-4 rounded-lg space-y-2 font-display">
+                <button class="text-center bg-gray-200 p-4 rounded-lg space-y-2 font-display cursor-pointer">
                     <p class="italic text-base font-semibold text-gray-600 text-center">60 Minutes</p>
                     <p class="text-2xl font-bold text-center">22:00 - 23:00</p>
                     <p class="text-lg font-bold text-gray-600 text-center">Booked</p>
@@ -410,6 +419,365 @@
 
             </div>
 
+
+        </section>
+
+        <!-- ? REVIEW SECTION -->
+        <section class="container mx-auto px-8 py-10">
+
+            <h2 class="font-display font-semibold text-2xl mb-6">
+                Review & Rating
+            </h2>
+
+            <!-- star summary, rating statistics -->
+            <div class="flex flex-col md:flex-row-reverse gap-4 md:gap-12 w-full mb-8">
+                <div class="flex-1 grid justify-center text-center min-h-full py-6 bg-gray-100 rounded-md">
+                    <h3 class="font-display text-2xl font-bold mb-4">4.5 Stars</h3>
+                    <span class="flex gap-4 w-fit mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-10 text-yellow-400"
+                            fill="currentColor">
+                            <path
+                                d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-10 text-yellow-400"
+                            fill="currentColor">
+                            <path
+                                d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-10 text-yellow-400"
+                            fill="currentColor">
+                            <path
+                                d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-10 text-yellow-400"
+                            fill="currentColor">
+                            <path
+                                d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                        </svg>
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="size-10 text-yellow-400">
+                            <path
+                                d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L19.7332 11.5L29.3332 12.3333L22.0665 18.6333L24.2332 28L15.9998 23.0333L7.7665 28Z"
+                                fill="#94a3b8" />
+                            <path
+                                d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L16 23L15.9998 23.0333L7.7665 28Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+                    <p class="font-body text-base">7k Ratings & 5k Reviews</p>
+                </div>
+                <div class="flex-1 space-y-2">
+                    <div class="flex items-center w-full gap-4 font-display font-medium">
+                        <p class="text-lg flex justify-end items-center gap-0.5 min-w-8">
+                            5 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-5 mb-0.5"
+                                fill="currentColor">
+                                <path
+                                    d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                            </svg>
+                        </p>
+                        <div class="relative overflow-hidden rounded-full bg-gray-200 w-full h-2">
+                            <span class="inline-block absolute h-full w-[80%] rounded-full bg-yellow-400">
+                            </span>
+                        </div>
+                        <p class="text-lg gap-1 min-w-8">10k</p>
+                    </div>
+                    <div class="flex items-center w-full gap-4 font-display font-medium">
+                        <p class="text-lg flex justify-end items-center gap-0.5 min-w-8">
+                            4 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-5 mb-0.5"
+                                fill="currentColor">
+                                <path
+                                    d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                            </svg>
+                        </p>
+                        <div class="relative overflow-hidden rounded-full bg-gray-200 w-full h-2">
+                            <span class="inline-block absolute h-full w-[30%] rounded-full bg-yellow-400">
+                            </span>
+                        </div>
+                        <p class="text-lg gap-1 min-w-8">2k</p>
+                    </div>
+                    <div class="flex items-center w-full gap-4 font-display font-medium">
+                        <p class="text-lg flex justify-end items-center gap-0.5 min-w-8">
+                            3 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-5 mb-0.5"
+                                fill="currentColor">
+                                <path
+                                    d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                            </svg>
+                        </p>
+                        <div class="relative overflow-hidden rounded-full bg-gray-200 w-full h-2">
+                            <span class="inline-block absolute h-full w-[20%] rounded-full bg-yellow-400">
+                            </span>
+                        </div>
+                        <p class="text-lg gap-1 min-w-8">562</p>
+                    </div>
+                    <div class="flex items-center w-full gap-4 font-display font-medium">
+                        <p class="text-lg flex justify-end items-center gap-0.5 min-w-8">
+                            2 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-5 mb-0.5"
+                                fill="currentColor">
+                                <path
+                                    d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                            </svg>
+                        </p>
+                        <div class="relative overflow-hidden rounded-full bg-gray-200 w-full h-2">
+                            <span class="inline-block absolute h-full w-[10%] rounded-full bg-yellow-400">
+                            </span>
+                        </div>
+                        <p class="text-lg gap-1 min-w-8">171</p>
+                    </div>
+                    <div class="flex items-center w-full gap-4 font-display font-medium">
+                        <p class="text-lg flex justify-end items-center gap-1 min-w-8">
+                            1 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="size-5 mb-0.5"
+                                fill="currentColor">
+                                <path
+                                    d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                            </svg>
+                        </p>
+                        <div class="relative overflow-hidden rounded-full bg-gray-200 w-full h-2">
+                            <span class="inline-block absolute h-full w-[5%] rounded-full bg-yellow-400">
+                            </span>
+                        </div>
+                        <p class="text-lg gap-1 min-w-8">21</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- reviews, review form -->
+            <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+
+                <div class="flex-1 space-y-4">
+                    <div class="bg-gray-100 p-4 rounded-md">
+                        <!-- profile -->
+                        <div class="flex gap-4 mb-4 items-center">
+                            <img class="size-10 rounded-full object-cover" src="assets/img/persons/person-1-male.jpg"
+                                alt="">
+                            <p class="font-display text-lg font-semibold">John Smith</p>
+                        </div>
+
+                        <!-- rating, date, content -->
+                        <div class="flex items-center flex-wrap gap-4 mb-4">
+                            <span class="flex gap-2 w-fit [&>svg]:size-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="text-yellow-400">
+                                    <path
+                                        d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L19.7332 11.5L29.3332 12.3333L22.0665 18.6333L24.2332 28L15.9998 23.0333L7.7665 28Z"
+                                        fill="#94a3b8" />
+                                    <path
+                                        d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L16 23L15.9998 23.0333L7.7665 28Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                            <p class="font-body italic text-sm text-gray-500">
+                                September 26th, 2025
+                            </p>
+                        </div>
+                        <p class="font-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque corporis distinctio unde
+                            exercitationem saepe et amet quibusdam quasi aliquam dolorum, minus voluptas consequuntur
+                            aspernatur quia facilis quae. Accusamus modi quia cumque error ducimus fuga id! Eius
+                            accusamus dolorem ullam illo.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-md">
+                        <!-- profile -->
+                        <div class="flex gap-4 mb-4 items-center">
+                            <img class="size-10 rounded-full object-cover" src="assets/img/persons/person-2-female.jpg"
+                                alt="">
+                            <p class="font-display text-lg font-semibold">
+                                Jessica Caroline
+                            </p>
+                        </div>
+
+                        <!-- rating, date, content -->
+                        <div class="flex items-center flex-wrap gap-4 mb-4">
+                            <span class="flex gap-2 w-fit [&>svg]:size-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="text-yellow-400">
+                                    <path
+                                        d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L19.7332 11.5L29.3332 12.3333L22.0665 18.6333L24.2332 28L15.9998 23.0333L7.7665 28Z"
+                                        fill="#94a3b8" />
+                                    <path
+                                        d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L16 23L15.9998 23.0333L7.7665 28Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                            <p class="font-body italic text-sm text-gray-500">
+                                September 26th, 2025
+                            </p>
+                        </div>
+                        <p class="font-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque corporis distinctio unde
+                            exercitationem saepe et amet quibusdam quasi aliquam dolorum, minus voluptas consequuntur
+                            aspernatur quia facilis quae. Accusamus modi quia cumque error ducimus fuga id! Eius
+                            accusamus dolorem ullam illo.
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-md">
+                        <!-- profile -->
+                        <div class="flex gap-4 mb-4 items-center">
+                            <img class="size-10 rounded-full object-cover" src="assets/img/persons/person-3-male.jpg"
+                                alt="">
+                            <p class="font-display text-lg font-semibold">
+                                George Teo
+                            </p>
+                        </div>
+
+                        <!-- rating, date, content -->
+                        <div class="flex items-center flex-wrap gap-4 mb-4">
+                            <span class="flex gap-2 w-fit [&>svg]:size-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-yellow-400"
+                                    fill="currentColor">
+                                    <path
+                                        d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="text-yellow-400">
+                                    <path
+                                        d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L19.7332 11.5L29.3332 12.3333L22.0665 18.6333L24.2332 28L15.9998 23.0333L7.7665 28Z"
+                                        fill="#94a3b8" />
+                                    <path
+                                        d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L16 23L15.9998 23.0333L7.7665 28Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </span>
+                            <p class="font-body italic text-sm text-gray-500">
+                                September 26th, 2025
+                            </p>
+                        </div>
+                        <p class="font-body">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque corporis distinctio unde
+                            exercitationem saepe et amet quibusdam quasi aliquam dolorum, minus voluptas consequuntur
+                            aspernatur quia facilis quae. Accusamus modi quia cumque error ducimus fuga id! Eius
+                            accusamus dolorem ullam illo.
+                        </p>
+                    </div>
+                </div>
+
+                <form action="" class="flex-1 space-y-4">
+                    <div class="">
+                        <h3 class="font-display font-semibold text-2xl mb-1">
+                            Review Form
+                        </h3>
+                        <p class="font-body text-base text-gray-500">
+                            Add your review and rating for this place!
+                        </p>
+                    </div>
+
+                    <span class="flex gap-2 w-fit [&>svg]:size-8 [&>svg]:cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-slate-400"
+                            fill="currentColor">
+                            <path
+                                d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-slate-400"
+                            fill="currentColor">
+                            <path
+                                d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-slate-400"
+                            fill="currentColor">
+                            <path
+                                d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="text-slate-400"
+                            fill="currentColor">
+                            <path
+                                d="m233-120 65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                        </svg>
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="text-slate-400">
+                            <path
+                                d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L19.7332 11.5L29.3332 12.3333L22.0665 18.6333L24.2332 28L15.9998 23.0333L7.7665 28Z"
+                                fill="#94a3b8" />
+                            <path
+                                d="M7.7665 28L9.93317 18.6333L2.6665 12.3333L12.2665 11.5L15.9998 2.66663L16 23L15.9998 23.0333L7.7665 28Z"
+                                fill="currentColor" />
+                        </svg>
+                    </span>
+
+                    <div>
+                        <label for="name" class="font-display tracking-wide text-base font-medium text-gray-700">
+                            Name
+                        </label>
+                        <input name="name" type="text" id="name" autocomplete="off"
+                            class="mt-1 font-body text-lg w-full p-4 bg-gray-100 rounded-md placeholder:text-gray-400/70 focus:outline-0"
+                            placeholder="Jacob Holden" />
+                    </div>
+
+                    <div>
+                        <label for="email" class="font-display tracking-wide text-base font-medium text-gray-700">
+                            Email
+                        </label>
+                        <input name="email" type="text" id="email" autocomplete="off"
+                            class="mt-1 font-body text-lg w-full p-4 bg-gray-100 rounded-md placeholder:text-gray-400/70 focus:outline-0"
+                            placeholder="test@example.com" />
+                    </div>
+
+                    <div>
+                        <label for="reviewContent"
+                            class="font-display tracking-wide text-base font-medium text-gray-700">
+                            Write your review
+                        </label>
+                        <textarea name="review" id="reviewContent"
+                            class="mt-1 font-body text-lg w-full p-4 bg-gray-100 rounded-md placeholder:text-gray-400/70 focus:outline-0"
+                            placeholder="Write your review about the venue" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="py-2.5 px-8 w-full rounded-md bg-primary font-display font-semibold text-lg cursor-pointer hover:bg-[#b7e748] transition">
+                        Submit Review
+                    </button>
+                </form>
+
+            </div>
 
         </section>
 
