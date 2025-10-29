@@ -35,6 +35,34 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
         });
     }
+
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const backdrop = document.getElementById('backdrop');
+
+    // Open mobile menu
+    hamburgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Close mobile menu
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('active');
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeMobileMenu);
+    backdrop.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on a link
+    const menuLinks = document.querySelectorAll('#mobileMenu a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
 });
 
 // *
@@ -100,22 +128,3 @@ function updateIndicators(item, track, index, indicator) {
         indicator.appendChild(dot);
     }
 }
-
-
-
-
-
-
-
-//? TEMPORARY CODE ==========================
-if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'auto'; // or 'auto'
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const pos = sessionStorage.getItem("scrollPos");
-    if (pos) {
-        window.scrollTo(0, parseInt(pos) + 500);
-        sessionStorage.removeItem("scrollPos");
-    }
-});
