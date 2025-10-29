@@ -45,9 +45,9 @@ This is a high-performance interface website built with fundamental web technolo
 
 You have two easy ways to experience the **Athlix** website:
 
-### 1. 🌐 Direct Link (GitHub Pages)
+### 1. 🌐 Direct Link (Vercel App)
 
-The website is fully hosted and instantly accessible via GitHub Pages:
+The website is fully hosted and instantly accessible via Vercel:
 
 * **Link:** https://athlix-rho.vercel.app/
 
