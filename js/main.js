@@ -185,7 +185,6 @@ function updateIndicators(item, track, index, indicator) {
     }
 }
 
-
 // *
 // *  SLIDER FUNCTIONALITY
 // *
@@ -212,7 +211,7 @@ testimonialNextBtn.addEventListener('click', () => {
     }
 });
 
-//? For venue booking section
+//? For field booking section
 // const track = document.getElementById('sliderTrack');
 // const prevBtn = document.getElementById('prevBtn');
 // const nextBtn = document.getElementById('nextBtn');
