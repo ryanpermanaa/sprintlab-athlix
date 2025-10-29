@@ -1,34 +1,25 @@
 <style>
     #navbar.scrolled {
-        background-color: var(--color-cst-black);
+        background-color: #020223;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     }
 </style>
 
 <nav id="navbar"
     class="fixed top-0 py-4 px-8 w-full flex justify-between bg-transparent text-white h-[4.5rem] z-50 transition">
+    <h1 class="font-heading font-semibold text-xl w-40">Athlix</h1>
+
     <section class="flex items-center gap-10">
-        <h1 class="font-heading font-semibold text-xl">Athlix</h1>
         <ul class="hidden lg:flex font-display text-sm items-center gap-4 tracking-wide">
-            <li><a href="#" class="transition hover:text-primary">Browse</a></li>
-            <li><a href="/play-together.html" class="transition hover:text-primary">Play together</a></li>
-            <li><a href="/event.html" class="transition hover:text-primary">Event</a></li>
+            <li><a href="../field-booking.html" class="transition hover:text-primary">Booking Field</a></li>
+            <li><a href="../find-coach.html" class="transition hover:text-primary">Coach</a></li>
+            <li><a href="../play-together.html" class="transition hover:text-primary">Play Together</a></li>
+            <li><a href="../event.html" class="transition hover:text-primary">Event</a></li>
+            <li><a href="../marketplace.html" class="transition hover:text-primary">Marketplace</a></li>
         </ul>
     </section>
 
     <section class="flex gap-2">
-        <!-- ? Search Input -->
-        <div class="hidden lg:inline-block relative">
-            <input placeholder="What are you looking for?"
-                class="peer bg-slate-800 pl-12 pr-5 h-full text-sm font-display rounded-full w-64 transition-all focus:w-72 outline-none"
-                name="search" type="search" />
-            <svg class="size-5 absolute top-1/2 -translate-y-1/2 left-4 text-gray-500 peer-focus:text-primary transition-colors"
-                stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                    stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-        </div>
 
         <!-- ? Notification -->
         <a href="#"
@@ -41,7 +32,7 @@
         </a>
 
         <!-- ? Profile -->
-        <a href="#"
+        <a href="../user-profile.html"
             class="bg-secondary hidden sm:flex items-center gap-3 py-1 pl-3 pr-2 rounded-full hover:bg-secondary">
             <p class="font-display text-sm tracking-wide">John Wick</p>
             <img class="rounded-full object-cover object-center h-full aspect-square"
