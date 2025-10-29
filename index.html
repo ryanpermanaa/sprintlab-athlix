@@ -6,24 +6,988 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Athlix Sport</title>
 
+    <!-- ? Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- ? Tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
         @theme {
             --color-cst-black: #020223;
             --color-primary: #C8FA50;
             --color-secondary: #682FF5;
+
+            --font-heading: 'Sora', sans-serif;
+            --font-display: 'Urbanist', sans-serif;
+            --font-body: 'Poppins', sans-serif;
         }
     </style>
-    <script src="js/main.js" defer></script>
+
+    <style>
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 30s infinite linear;
+            will-change: transform;
+        }
+
+        .logo-container:hover .animate-scroll {
+            animation-play-state: paused;
+        }
+
+        .logo-item {
+            width: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-inline: 1rem;
+        }
+
+        .logo-item img {
+            object-fit: contain;
+            object-position: center;
+        }
+    </style>
+
+    <!-- ? Vanilla JS -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/home.js" defer></script>
 </head>
 
-<body class="">
-    <header data-include="partials/navbar.html"></header>
+<body class="relative overflow-x-hidden">
+    <header data-include="navbar.html"></header>
 
-    <!-- Dynamic content will go here -->
-    <main id="app" class="min-h-screen"></main>
+    <main class="min-h-screen">
 
-    <footer data-include="partials/footer.html"></footer>
+        <!-- ? HERO SECTION -->
+        <section class="bg-cst-black">
+            <div
+                class="relative min-h-screen container mx-auto flex flex-col px-4 justify-center items-center text-white isolate">
+
+                <section class="flex flex-col">
+                    <h1
+                        class="text-3xl sm:text-4xl md:text-6xl font-semibold font-heading text-center leading-tight tracking-tighter mb-4">
+                        Level Up Your <br> <span class="text-primary">Game</span> with <i>Ease</i>
+                    </h1>
+                    <p class="font-display text-base text-center text-gray-300">All your sports needs, just one click
+                        away.
+                    </p>
+                    <a href="#"
+                        class="flex items-center gap-3 font-display font-medium border-2 border-spacing-2 border-white rounded-full w-fit mx-auto mt-12 py-3 px-8 hover:bg-white hover:text-black transition">
+                        Get Started <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                </section>
+
+                <img class="absolute top-0 h-96 w-screen -z-10" src="assets/decorations/bg-circle-mosh.png" alt="">
+
+                <div class="absolute bottom-0 w-screen -z-20 isolate">
+                    <!-- Shadow gradient overlay -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-b from-cst-black via-cst-black/50 to-transparent opacity-100 z-10">
+                    </div>
+                    <img class="bottom-0 w-screen opacity-40" src="assets/decorations/hero-background-decoration.png"
+                        alt="" />
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ? REPUTATION SECTION -->
+        <section class="bg-cst-black text-white">
+            <div class="container mx-auto py-20 px-8">
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-center max-w-4xl gap-14 mx-auto">
+                    <div class="text-center">
+                        <p class="font-heading font-semibold text-4xl mb-3">100k+</p>
+                        <span class="font-display text-gray-300">Users joined and counting</span>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-heading font-semibold text-4xl mb-3">550+</p>
+                        <span class="font-display text-gray-300">Sports venues available</span>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-heading font-semibold text-4xl mb-3">300+</p>
+                        <span class="font-display text-gray-300">Certified coaches</span>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-heading font-semibold text-4xl mb-3">2.500+</p>
+                        <span class="font-display text-gray-300">Products & Services</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ? COLLABORATORS LOGO SECTION -->
+        <section class="bg-secondary">
+            <div class="container mx-auto logo-container relative overflow-hidden py-8">
+
+                <div class="flex w-fit animate-scroll space-x-2">
+                    <div class="flex">
+                        <div class="logo-item transition-all duration-300">
+                            <img src="assets/img/logos/Logo.png" alt="">
+                        </div>
+                        <div class="logo-item transition-all duration-300">
+                            <img src="assets/img/logos/Logo-1.png" alt="">
+                        </div>
+                        <div class="logo-item transition-all duration-300">
+                            <img src="assets/img/logos/Logo-2.png" alt="">
+                        </div>
+                        <div class="logo-item transition-all duration-300">
+                            <img src="assets/img/logos/Logo-3.png" alt="">
+                        </div>
+                        <div class="logo-item transition-all duration-300">
+                            <img src="assets/img/logos/Logo-4.png" alt="">
+                        </div>
+                        <div class="logo-item transition-all duration-300">
+                            <img src="assets/img/logos/Logo.png" alt="">
+                        </div>
+                        <div class="logo-item transition-all duration-300">
+                            <img src="assets/img/logos/Logo-1.png" alt="">
+                        </div>
+                        <div class="logo-item transition-all duration-300">
+                            <img src="assets/img/logos/Logo-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gradient overlays -->
+                <div
+                    class="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-secondary to-transparent pointer-events-none">
+                </div>
+                <div
+                    class="absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-secondary to-transparent pointer-events-none">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ? AVAILABLE FEATURES SECTION -->
+        <section class="relative container mx-auto py-18 md:py-20 px-8 overflow-hidden">
+
+            <div class="absolute right-0 -top-14 -z-10">
+                <img class="" src="assets/decorations/line-rectangle-pattern.png" alt="">
+            </div>
+
+            <!-- ? Text Section -->
+            <div class="mb-8 md:mb-14 max-w-xl">
+                <h2 class="font-heading text-3xl md:text-4xl font-semibold mb-4">Game-Changing Benefits for Every
+                    Athlete
+                </h2>
+                <p class="font-body text-sm text-gray-600 max-w-lg leading-snug">
+                    We bring together courts, coaches, and communities into one seamless hub, making your sports journey
+                    smarter and easier.
+                </p>
+            </div>
+
+            <!-- ? Features Section -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- 1️ Easy Court Booking -->
+                <div
+                    class="group md:aspect-square flex flex-col justify-center items-center text-center p-5 rounded-lg hover:bg-secondary hover:text-white transition bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-14 text-secondary group-hover:text-white transition mb-6">
+                        <path
+                            d="M12 11.993a.75.75 0 0 0-.75.75v.006c0 .414.336.75.75.75h.006a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75H12ZM12 16.494a.75.75 0 0 0-.75.75v.005c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H12ZM8.999 17.244a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.006ZM7.499 16.494a.75.75 0 0 0-.75.75v.005c0 .414.336.75.75.75h.005a.75.75 0 0 0 .75-.75v-.005a.75.75 0 0 0-.75-.75H7.5ZM13.499 14.997a.75.75 0 0 1 .75-.75h.006a.75.75 0 0 1 .75.75v.005a.75.75 0 0 1-.75.75h-.006a.75.75 0 0 1-.75-.75v-.005ZM14.25 16.494a.75.75 0 0 0-.75.75v.006c0 .414.335.75.75.75h.005a.75.75 0 0 0 .75-.75v-.006a.75.75 0 0 0-.75-.75h-.005ZM15.75 14.995a.75.75 0 0 1 .75-.75h.005a.75.75 0 0 1 .75.75v.006a.75.75 0 0 1-.75.75H16.5a.75.75 0 0 1-.75-.75v-.006ZM13.498 12.743a.75.75 0 0 1 .75-.75h2.25a.75.75 0 1 1 0 1.5h-2.25a.75.75 0 0 1-.75-.75ZM6.748 14.993a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" />
+                        <path fill-rule="evenodd"
+                            d="M18 2.993a.75.75 0 0 0-1.5 0v1.5h-9V2.994a.75.75 0 1 0-1.5 0v1.497h-.752a3 3 0 0 0-3 3v11.252a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3V7.492a3 3 0 0 0-3-3H18V2.993ZM3.748 18.743v-7.5a1.5 1.5 0 0 1 1.5-1.5h13.5a1.5 1.5 0 0 1 1.5 1.5v7.5a1.5 1.5 0 0 1-1.5 1.5h-13.5a1.5 1.5 0 0 1-1.5-1.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-display font-bold mb-1 transition">Easy Court Booking</h3>
+                    <p class="text-gray-600 group-hover:text-white font-body max-w-xs transition">
+                        Reserve your favorite venue in just a few clicks.
+                    </p>
+                </div>
+
+                <!-- 2️ Professional Coaches -->
+                <div
+                    class="group md:aspect-square flex flex-col items-center justify-center text-center p-5 rounded-lg hover:bg-secondary hover:text-white transition bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-14 text-secondary group-hover:text-white transition mb-6">
+                        <path
+                            d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" />
+                        <path
+                            d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" />
+                        <path
+                            d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" />
+                    </svg>
+                    <h3 class="text-xl font-display font-bold mb-1 transition">Professional Coaches</h3>
+                    <p class="text-gray-600 group-hover:text-white font-body max-w-xs transition">
+                        Access certified trainers across multiple sports.
+                    </p>
+                </div>
+
+                <!-- 3 Matchmaking System -->
+                <div
+                    class="group md:aspect-square flex flex-col items-center justify-center text-center p-5 rounded-lg hover:bg-secondary hover:text-white transition bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"
+                        class="size-14 text-secondary group-hover:text-white transition mb-6">
+                        <path
+                            d="M484-120q-17 0-28.5-11.5T444-160q0-7 3-14.5t9-13.5l185-185-29-29-184 185q-6 6-13 9t-15 3q-17 0-28.5-11.5T360-245q0-10 3-16.5t8-11.5l185-185-28-28-185 184q-6 6-13 9t-16 3q-16 0-28-12t-12-28q0-8 3-15t9-13l185-185-29-28-184 185q-5 5-12 8t-17 3q-17 0-28.5-11.5T189-415q0-8 3-15t9-13l223-223 150 151q11 11 26 17.5t30 6.5q32 0 56-22.5t24-57.5q0-14-5-29t-18-28L508-807q17-16 38-24.5t42-8.5q26 0 48 8.5t40 26.5l169 170q18 18 26.5 40t8.5 51q0 20-9 40.5T845-466L512-132q-8 8-14 10t-14 2ZM141-440l-26-26q-17-16-26-38t-9-46q0-26 10-48t25-37l169-170q16-16 38-25.5t43-9.5q27 0 48 7.5t41 27.5l205 205q6 6 9 13t3 15q0 16-12 28t-28 12q-9 0-15-2.5t-13-9.5L423-722 141-440Z" />
+                    </svg>
+                    <h3 class="text-xl font-display font-bold mb-1 transition">Matchmaking System</h3>
+                    <p class="text-gray-600 group-hover:text-white font-body max-w-xs transition">
+                        Find opponents that match your level and interest.
+                    </p>
+                </div>
+
+                <!-- 4 Wide Venue Network -->
+                <div
+                    class="group md:aspect-square flex flex-col items-center justify-center text-center p-5 rounded-lg hover:bg-secondary hover:text-white transition bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-14 text-secondary group-hover:text-white transition mb-6">
+                        <path
+                            d="M15.75 8.25a.75.75 0 0 1 .75.75c0 1.12-.492 2.126-1.27 2.812a.75.75 0 1 1-.992-1.124A2.243 2.243 0 0 0 15 9a.75.75 0 0 1 .75-.75Z" />
+                        <path fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM4.575 15.6a8.25 8.25 0 0 0 9.348 4.425 1.966 1.966 0 0 0-1.84-1.275.983.983 0 0 1-.97-.822l-.073-.437c-.094-.565.25-1.11.8-1.267l.99-.282c.427-.123.783-.418.982-.816l.036-.073a1.453 1.453 0 0 1 2.328-.377L16.5 15h.628a2.25 2.25 0 0 1 1.983 1.186 8.25 8.25 0 0 0-6.345-12.4c.044.262.18.503.389.676l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.575 15.6Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-display font-bold mb-1 transition">Wide Venue Network</h3>
+                    <p class="text-gray-600 group-hover:text-white font-body max-w-xs transition">
+                        Connect with thousands of courts and facilities.
+                    </p>
+                </div>
+
+                <!-- 5 All in one platform -->
+                <div
+                    class="group md:aspect-square flex flex-col items-center justify-center text-center p-5 rounded-lg hover:bg-primary hover:text-black transition bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-14 text-secondary group-hover:text-black transition mb-6">
+                        <path fill-rule="evenodd"
+                            d="M3 6a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3V6ZM3 15.75a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-2.25Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3v-2.25Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-display font-bold mb-1 transition">All-in-One</h3>
+                    <p class="text-gray-600 group-hover:text-black font-body max-w-xs transition">
+                        From training to booking and competing, all in one place.
+                    </p>
+                </div>
+
+                <!-- 6 Verified Community  -->
+                <div
+                    class="group md:aspect-square flex flex-col items-center justify-center text-center p-5 rounded-lg hover:bg-primary hover:text-black transition bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-14 text-secondary group-hover:text-black transition mb-6">
+                        <path fill-rule="evenodd"
+                            d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-xl font-display font-bold mb-1 transition">Verified Community</h3>
+                    <p class="text-gray-600 group-hover:text-black font-body max-w-xs transition">
+                        Join a trusted network of athletes and sports enthusiasts.
+                    </p>
+                </div>
+
+                <!-- 7 Sports Products & Services  -->
+                <div
+                    class="group md:aspect-square flex flex-col items-center justify-center text-center p-5 rounded-lg hover:bg-primary hover:text-black transition bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"
+                        class="text-secondary group-hover:text-black transition mb-6 size-14">
+                        <path
+                            d="m414-168 12-56q3-13 12.5-21.5T462-256l124-10q13-2 24 5t16 19l16 38q39-23 70-55.5t52-72.5l-12-6q-11-8-16-19.5t-2-24.5l28-122q3-12 12.5-20t21.5-10q-5-25-12.5-48.5T764-628q-9 5-19.5 4.5T726-630l-106-64q-11-7-16-19t-2-25l8-34q-31-14-63.5-21t-66.5-7q-14 0-29 1.5t-29 4.5l30 68q5 12 2.5 25T442-680l-94 82q-10 9-23.5 10t-24.5-6l-92-56q-23 38-35.5 81.5T160-480q0 16 4 52l88-8q14-2 25.5 4.5T294-412l48 114q5 12 2.5 25T332-252l-38 32q27 20 57.5 33t62.5 19Zm72-172q-13 2-24-5t-16-19l-54-124q-5-12-1.5-25t13.5-21l102-86q9-9 22-10t24 6l112 66q11 7 17 19t3 25l-32 130q-3 13-12 21.5T618-352l-132 12Zm-6 260q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+                    </svg>
+                    <h3 class="text-xl font-display font-bold mb-1 transition">Sports Products & Services</h3>
+                    <p class="text-gray-600 group-hover:text-black font-body max-w-xs transition">
+                        Discover gear and services to boost your game.
+                    </p>
+                </div>
+
+                <!-- 8 Seamless Experience  -->
+                <div
+                    class="group md:aspect-square flex flex-col items-center justify-center text-center p-5 rounded-lg hover:bg-primary hover:text-black transition bg-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-14 text-secondary group-hover:text-black transition mb-6">
+                        <path fill-rule="evenodd"
+                            d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 0 1 .75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 0 1 9.75 22.5a.75.75 0 0 1-.75-.75v-4.131A15.838 15.838 0 0 1 6.382 15H2.25a.75.75 0 0 1-.75-.75 6.75 6.75 0 0 1 7.815-6.666ZM15 6.75a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5Z"
+                            clip-rule="evenodd" />
+                        <path
+                            d="M5.26 17.242a.75.75 0 1 0-.897-1.203 5.243 5.243 0 0 0-2.05 5.022.75.75 0 0 0 .625.627 5.243 5.243 0 0 0 5.022-2.051.75.75 0 1 0-1.202-.897 3.744 3.744 0 0 1-3.008 1.51c0-1.23.592-2.323 1.51-3.008Z" />
+                    </svg>
+                    <h3 class="text-xl font-display font-bold mb-1 transition">Seamless Experience</h3>
+                    <p class="text-gray-600 group-hover:text-black font-body max-w-xs transition">
+                        Enjoy a fast, modern, and user-friendly platform.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ? AVAILABLE SERVICES SECTION -->
+        <section class="relative container mx-auto px-8 py-16">
+
+            <div class="block absolute -left-36 -top-52 -z-10">
+                <img class="opacity-60 lg:opacity-100" src="assets/decorations/line-rectangle-pattern.png" alt="">
+            </div>
+
+            <div class="sm:ml-auto mb-8 md:mb-14 max-w-md">
+                <h2 class="font-heading text-3xl sm:text-end md:text-4xl font-semibold mb-4">
+                    Discover What You Can Do Here!
+                </h2>
+                <p class="font-body text-sm sm:text-end text-gray-600 leading-snug">
+                    Easily book venues, learn from certified coaches, compete with players at your level, and find
+                    quality gear—all in one place.
+                </p>
+            </div>
+
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:[&>div]:odd:mt-8 lg:[&>div]:even:mb-8 [&>div]:min-h-60 xl:[&>div]:min-h-[20rem]">
+
+                <!-- ? 1. Court Booking -->
+                <div
+                    class="flex flex-col p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg bg-secondary text-white transition rounded-lg">
+                    <h3 class="text-3xl font-display font-bold leading-none mb-4">
+                        Court <br>
+                        <span class="text-primary">Booking</span>
+                    </h3>
+                    <p class="text-sm font-body max-w-xs transition mb-4 md:mb-10">
+                        Find and book sports venues anytime, anywhere with just a few clicks.
+                    </p>
+                    <a href="#"
+                        class="inline-block mt-auto w-fit p-2 border-2 border-white text-white hover:bg-white hover:text-black rounded-full self-end transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                            <path fill-rule="evenodd"
+                                d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- ? 2. Find a Coach -->
+                <div
+                    class="flex flex-col p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg bg-primary text-black transition rounded-lg">
+                    <h3 class="text-3xl font-display font-bold leading-none mb-4">
+                        Find a <br>
+                        <span class="text-secondary">Coach</span>
+                    </h3>
+                    <p class="text-sm font-body max-w-xs transition mb-4 md:mb-10">
+                        Connect with certified coaches to sharpen your skills and reach your goals.
+                    </p>
+                    <a href="#"
+                        class="inline-block mt-auto w-fit p-2 border-2 border-black text-black hover:bg-black hover:text-white rounded-full self-end transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                            <path fill-rule="evenodd"
+                                d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- ? 3. Find Opponents -->
+                <div
+                    class="flex flex-col outline-2 border-black p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg bg-secondary text-white transition rounded-lg">
+                    <h3 class="text-3xl font-display font-bold leading-none mb-4">
+                        Find <br>
+                        <span class="text-primary">Opponents</span>
+                    </h3>
+                    <p class="text-sm font-body max-w-xs transition mb-4 md:mb-10">
+                        Match with players at your level and enjoy competitive or friendly games.
+                    </p>
+                    <a href="#"
+                        class="inline-block mt-auto w-fit p-2 border-2 border-white text-white hover:bg-white hover:text-black rounded-full self-end transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                            <path fill-rule="evenodd"
+                                d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- ? 4. Sports Products -->
+                <div
+                    class="flex flex-col p-4 group hover:outline-none hover:-translate-y-2 hover:shadow-lg bg-primary text-black transition rounded-lg">
+                    <h3 class="text-3xl font-display font-bold leading-none mb-4">
+                        Sport <br>
+                        <span class="text-secondary">Products</span>
+                    </h3>
+                    <p class="text-sm font-body max-w-xs transition mb-4 md:mb-10">
+                        Discover gear, apparel, and accessories to support your training and matches.
+                    </p>
+                    <a href="#"
+                        class="inline-block mt-auto w-fit p-2 border-2 border-black text-black hover:bg-black hover:text-white rounded-full self-end transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
+                            <path fill-rule="evenodd"
+                                d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ? ABOUT SECTION -->
+        <section class="bg-cst-black text-white">
+            <div class="relative container mx-auto px-8 py-20 isolate">
+
+                <!-- decorations -->
+                <img class="absolute top-0 -left-72 -z-10" src="assets/decorations/bg-circle-mosh-full.png" alt="">
+                <img class="absolute top-40 -right-72 -z-10" src="assets/decorations/bg-circle-mosh-full.png" alt="">
+
+                <!-- text section -->
+                <div class="mb-12 w-fit">
+                    <h2 class="font-display text-primary font-semibold tracking-widest mb-2">ATHLIX</h2>
+                    <h3 class="font-heading font-bold text-4xl md:text-5xl mb-8">SPORT CENTER</h3>
+                    <p class="font-body text-sm max-w-3xl font-light text-gray-300 leading-relaxed">
+                        Athlix is a modern sport center that brings everything you need into one platform making it
+                        easier to book courts, connect with professional coaches, find opponents to play with, and
+                        explore quality sports products. Designed for both casual players and serious athletes, Athlix
+                        creates a seamless and accessible experience that turns your passion for sports into action.
+                    </p>
+                </div>
+
+                <!-- image section -->
+                <div class="w-full h-96 mx-auto overflow-hidden rounded-md">
+                    <img class="h-full w-full object-cover object-center" src="assets/img/persons/group-photo.png"
+                        alt="">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ? TAGLINE SCROLL SECTION -->
+        <section class="bg-cst-black">
+            <div class="py-12 opacity-30">
+
+                <div id="sportlife-parallax" data-scroll-parallax
+                    class="flex items-center gap-6 mb-8 font-display italic text-white w-max font-black text-7xl overflow-hidden">
+                    <p>SPORT LIFE</p>
+                    <div class="inline-block size-5 aspect-square bg-secondary rounded-full"></div>
+                </div>
+                <div id="gameready-parallax" data-scroll-parallax
+                    class="flex items-center gap-6 font-display italic text-white w-max font-black text-7xl overflow-hidden">
+                    <p>GAME READY</p>
+                    <div class="inline-block size-5 aspect-square bg-primary rounded-full"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ? HIGHLIGHT VIDEO SECTION -->
+        <section class="bg-cst-black overflow-hidden">
+            <div
+                class="relative container mx-auto flex flex-col md:flex-row justify-center gap-10 md:gap-16 py-16 px-8 text-white isolate ">
+
+                <!-- text section -->
+                <div class="flex flex-col justify-between">
+                    <div class="mb-10 md:mb-0">
+                        <h3 class="font-heading font-semibold leading-snug text-3xl md:text-4xl mb-6">
+                            Experience the <br> Future of Sports
+                        </h3>
+                        <p class="font-body text-sm max-w-md font-light text-gray-300 leading-relaxed">
+                            Discover how Athlix makes it easier to find venues, connect with coaches, and play the game
+                            you love.
+                        </p>
+                    </div>
+
+                    <a href="#"
+                        class="flex items-center gap-3 font-display font-medium border-2 border-spacing-2 border-white rounded-full w-fit py-3 px-8 hover:bg-white hover:text-black transition">
+                        Try it Free <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- decoration -->
+                <img class="absolute top-0 -left-72 -z-10 opacity-30" src="assets/decorations/bg-circle-mosh-full.png">
+
+                <!-- video section -->
+                <div class="relative flex-6 h-full">
+                    <!-- decoration -->
+                    <img class="absolute -top-40 -left-70 -z-10 opacity-60"
+                        src="assets/decorations/bg-circle-mosh-full.png" alt="">
+
+                    <!-- <video src=""></video> -->
+                    <div class="bg-gray-500 aspect-video w-full rounded-md"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ? USAGE TUTORIAL SECTION -->
+        <section class="container mx-auto px-8 py-10">
+
+            <p class="font-display italic text-xl font-semibold mb-3">
+                How to Use <span class="text-secondary">Athlix</span>
+            </p>
+            <h2 class="font-heading text-3xl font-semibold max-w-xl mb-6">
+                See how easy it is to turn your sports plans into action
+            </h2>
+
+            <!-- steps -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-18">
+                <div class="flex gap-4">
+                    <p class="font-heading font-medium text-3xl text-gray-400 mt-2 mr-1.5 italic">1.</p>
+                    <div class="">
+                        <h3 class="font-display font-bold text-xl mb-2">
+                            Create your Account
+                        </h3>
+                        <p class="font-body">
+                            Sign up for free and set up your profile — choose your favorite sports and
+                            skill level.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <p class="font-heading font-medium text-3xl text-gray-400 mt-2 italic">2.</p>
+                    <div class="">
+                        <h3 class="font-display font-bold text-xl mb-2">
+                            Find what you need
+                        </h3>
+                        <p class="font-body">
+                            Search for venues, coaches, or opponents that match your preferences and location.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <p class="font-heading font-medium text-3xl text-gray-400 mt-2 italic">3.</p>
+                    <div class="">
+                        <h3 class="font-display font-bold text-xl mb-2">
+                            Book or Connect
+                        </h3>
+                        <p class="font-body">
+                            Reserve your court, hire a coach, or challenge another player directly through the platform.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <p class="font-heading font-medium text-3xl text-gray-400 mt-2 italic">4.</p>
+                    <div class="">
+                        <h3 class="font-display font-bold text-xl mb-2">
+                            Play & Enjoy
+                        </h3>
+                        <p class="font-body">
+                            Show up, play your best, and let Athlix handle the rest — simple, fast, and fun.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- photos decoration -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-2.5 [&>div>div]:rounded-md [&_img]:hover:scale-105 [&_img]:transition">
+                <div class="flex flex-col gap-2.5">
+                    <div class="relative h-80 w-full overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center" src="assets/img/tennis.jpg"
+                            alt="">
+                    </div>
+                    <div class="relative h-80 md:h-60 w-full overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center"
+                            src="assets/img/competitive-running.jpg" alt="">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                    <div class="relative h-80 md:h-100 w-full overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center"
+                            src="assets/img/rock-climbing.jpg" alt="">
+                    </div>
+                    <div class="relative hidden md:block w-full flex-1 overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center" src="assets/img/soccer-sport.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2.5">
+                    <div class="relative hidden md:block h-60 w-full overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center" src="assets/img/deadlift.jpg"
+                            alt="">
+                    </div>
+                    <div class="relative hidden md:block w-full flex-1 overflow-hidden">
+                        <img class="absolute w-full h-full object-cover object-center"
+                            src="assets/img/basketball-sport.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ? FAQ SECTION -->
+        <section class="container mx-auto flex flex-col lg:flex-row gap-8 px-8 py-14">
+
+            <!-- texts -->
+            <div class="flex-5 flex flex-col justify-between gap-6">
+                <div class="">
+                    <h2 class="font-heading text-3xl font-semibold max-w-sm mb-4">
+                        Everything you need to know about using Athlix
+                    </h2>
+                    <p class="font-body text-gray-500 text-sm">
+                        We’ve gathered answers to the most common questions from our community, so you can enjoy every
+                        game
+                        with confidence.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-md">
+                    <h3 class="font-display font-medium text-xl mb-2">
+                        Have another questions?
+                    </h3>
+                    <p class="font-body text-gray-500 text-sm mb-6">
+                        Can’t find the answer to your question? Send us an email and we’ll get back to your as soon as
+                        possible
+                    </p>
+                    <a href="" class="bg-secondary text-white py-2 px-4 text-sm rounded-md font-display">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- faqs -->
+            <div class="flex-7 w-full mx-auto min-h-100 md:min-h-95">
+                <div class="">
+                    <div class="overflow-hidden py-4 border-b-1 border-gray-300">
+                        <button
+                            class="faq-btn w-full text-left flex justify-between items-center focus:outline-none cursor-pointer">
+                            <span class="font-display text-lg font-semibold">
+                                1. What is Athlix
+                            </span>
+                            <svg class="size-5 transform transition text-secondary" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="font-body text-sm max-h-0 max-w-lg overflow-hidden transition-all duration-300 faq-content text-gray-500">
+                            <p class="pt-2">
+                                Athlix is a modern sports platform that helps you find venues, coaches, and players
+                                nearby. It’s built to make organizing your sports activities faster and simpler.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden py-4 border-b-1 border-gray-300">
+                        <button
+                            class="faq-btn w-full text-left flex justify-between items-center focus:outline-none cursor-pointer">
+                            <span class="font-display text-lg font-semibold">
+                                2. How do I reserve a sports venue?
+                            </span>
+                            <svg class="size-5 transform transition text-secondary" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="font-body text-sm max-h-0 max-w-lg overflow-hidden transition-all duration-300 faq-content text-gray-500">
+                            <p class="pt-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad impedit autem vero aliquid
+                                iste animi doloribus laudantium accusamus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden py-4 border-b-1 border-gray-300">
+                        <button
+                            class="faq-btn w-full text-left flex justify-between items-center focus:outline-none cursor-pointer">
+                            <span class="font-display text-lg font-semibold">
+                                3. Can I find a coach through Athlix?
+                            </span>
+                            <svg class="size-5 transform transition text-secondary" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="font-body text-sm max-h-0 max-w-lg overflow-hidden transition-all duration-300 faq-content text-gray-500">
+                            <p class="pt-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad impedit autem vero aliquid
+                                iste animi doloribus laudantium accusamus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden py-4 border-b-1 border-gray-300">
+                        <button
+                            class="faq-btn w-full text-left flex justify-between items-center focus:outline-none cursor-pointer">
+                            <span class="font-display text-lg font-semibold">
+                                4. How can I meet other players?
+                            </span>
+                            <svg class="size-5 transform transition text-secondary" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="font-body text-sm max-h-0 max-w-lg overflow-hidden transition-all duration-300 faq-content text-gray-500">
+                            <p class="pt-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad impedit autem vero aliquid
+                                iste animi doloribus laudantium accusamus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden py-4">
+                        <button
+                            class="faq-btn w-full text-left flex justify-between items-center focus:outline-none cursor-pointer">
+                            <span class="font-display text-lg font-semibold">
+                                5. Do I need to pay to use Athlix?
+                            </span>
+                            <svg class="size-5 transform transition text-secondary" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div
+                            class="font-body text-sm max-h-0 max-w-lg overflow-hidden transition-all duration-300 faq-content text-gray-500">
+                            <p class="pt-2">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad impedit autem vero aliquid
+                                iste animi doloribus laudantium accusamus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ? TESTIMONIALS SECTION -->
+        <section class="relative container mx-auto px-8 py-14">
+            <!-- decoration -->
+            <div class="absolute -left-80 -top-50 -z-10 opacity-50">
+                <img class="w-full h-auto" src="assets/decorations/line-rectangle-pattern.png" alt="">
+            </div>
+
+            <h2 class="font-heading text-3xl font-semibold max-w-xl mb-4 capitalize">
+                what our users say
+            </h2>
+            <p class="font-body text-gray-500 text-sm max-w-xl mb-12">
+                Hear how people from all backgrounds from weekend players to seasoned trainers use Athlix to elevate
+                their sports experience.
+            </p>
+
+            <style>
+                .testimonial-track {
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                .testimonial-item {
+                    width: 100%;
+                    margin-right: 5px;
+                    padding: 1rem;
+                }
+
+                @media (min-width: 640px) {
+                    .testimonial-item {
+                        width: calc(50% - 16px);
+                    }
+                }
+
+                @media (min-width: 1024px) {
+                    .testimonial-item {
+                        width: calc(33.333% - 16px);
+                    }
+                }
+
+                @media (min-width: 1280px) {
+                    .testimonial-item {
+                        width: calc(25% - 16px);
+                    }
+                }
+            </style>
+
+            <!-- Slider Viewport -->
+            <div class="overflow-hidden rounded-md mb-8">
+                <div id="testimonialTrack" class="testimonial-track flex gap-4 min-h-40 md:min-h-60">
+
+                    <!-- Slide Items -->
+                    <div class="flex-shrink-0 testimonial-item group flex flex-col relative overflow-hidden rounded-lg">
+
+                        <div class="flex gap-4 items-center mb-4">
+                            <img class="size-10 rounded-full object-cover object-center"
+                                src="assets/img/persons/person-1-male.jpg" alt="">
+                            <div class="">
+                                <h3 class="font-display font-semibold text-xl">Wade Warren</h3>
+                                <p class="font-body font-light text-sm">
+                                    Badminton Trainer
+                                </p>
+                            </div>
+                        </div>
+                        <p class="font-body text-base text-gray-600">
+                            The platform makes it super easy to find nearby venues. I can plan games with friends in
+                            minutes — no more endless group chats.
+                        </p>
+
+                    </div>
+                    <div class="flex-shrink-0 testimonial-item group flex flex-col relative overflow-hidden rounded-lg">
+
+                        <div class="flex gap-4 items-center mb-4">
+                            <img class="size-10 rounded-full object-cover object-center"
+                                src="assets/img/persons/person-2-female.jpg" alt="">
+                            <div class="">
+                                <h3 class="font-display font-semibold text-xl">Alice Jane</h3>
+                                <p class="font-body font-light text-sm">
+                                    Tennis Enthusiasts
+                                </p>
+                            </div>
+                        </div>
+                        <p class="font-body text-base text-gray-600">
+                            The platform makes it super easy to find nearby venues. I can plan games with friends in
+                            minutes — no more endless group chats.
+                        </p>
+
+                    </div>
+
+                    <div class="flex-shrink-0 testimonial-item group flex flex-col relative overflow-hidden rounded-lg">
+
+                        <div class="flex gap-4 items-center mb-4">
+                            <img class="size-10 rounded-full object-cover object-center"
+                                src="assets/img/persons/person-1-male.jpg" alt="">
+                            <div class="">
+                                <h3 class="font-display font-semibold text-xl">Wade Warren</h3>
+                                <p class="font-body font-light text-sm">
+                                    Badminton Trainer
+                                </p>
+                            </div>
+                        </div>
+                        <p class="font-body text-base text-gray-600">
+                            The platform makes it super easy to find nearby venues. I can plan games with friends in
+                            minutes — no more endless group chats.
+                        </p>
+
+                    </div>
+                    <div class="flex-shrink-0 testimonial-item group flex flex-col relative overflow-hidden rounded-lg">
+
+                        <div class="flex gap-4 items-center mb-4">
+                            <img class="size-10 rounded-full object-cover object-center"
+                                src="assets/img/persons/person-2-female.jpg" alt="">
+                            <div class="">
+                                <h3 class="font-display font-semibold text-xl">Alice Jane</h3>
+                                <p class="font-body font-light text-sm">
+                                    Tennis Enthusiasts
+                                </p>
+                            </div>
+                        </div>
+                        <p class="font-body text-base text-gray-600">
+                            The platform makes it super easy to find nearby venues. I can plan games with friends in
+                            minutes — no more endless group chats.
+                        </p>
+
+                    </div>
+
+                    <div class="flex-shrink-0 testimonial-item group flex flex-col relative overflow-hidden rounded-lg">
+
+                        <div class="flex gap-4 items-center mb-4">
+                            <img class="size-10 rounded-full object-cover object-center"
+                                src="assets/img/persons/person-1-male.jpg" alt="">
+                            <div class="">
+                                <h3 class="font-display font-semibold text-xl">Wade Warren</h3>
+                                <p class="font-body font-light text-sm">
+                                    Badminton Trainer
+                                </p>
+                            </div>
+                        </div>
+                        <p class="font-body text-base text-gray-600">
+                            The platform makes it super easy to find nearby venues. I can plan games with friends in
+                            minutes — no more endless group chats.
+                        </p>
+
+                    </div>
+                    <div class="flex-shrink-0 testimonial-item group flex flex-col relative overflow-hidden rounded-lg">
+
+                        <div class="flex gap-4 items-center mb-4">
+                            <img class="size-10 rounded-full object-cover object-center"
+                                src="assets/img/persons/person-2-female.jpg" alt="">
+                            <div class="">
+                                <h3 class="font-display font-semibold text-xl">Alice Jane</h3>
+                                <p class="font-body font-light text-sm">
+                                    Tennis Enthusiasts
+                                </p>
+                            </div>
+                        </div>
+                        <p class="font-body text-base text-gray-600">
+                            The platform makes it super easy to find nearby venues. I can plan games with friends in
+                            minutes — no more endless group chats.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div id="indicators" class="flex justify-center gap-2 mt-6"></div>
+
+            </div>
+
+            <div class="flex justify-center ml-auto gap-3 border-t-2 border-gray-400/50 pt-6">
+                <button id="prevBtnTestimonial"
+                    class="h-fit enabled:cursor-pointer p-2 border-2 border-black rounded-full enabled:hover:bg-secondary enabled:hover:border-secondary enabled:hover:text-white transition disabled:opacity-30 active:scale-95">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                    </svg>
+                </button>
+
+                <button id="nextBtnTestimonial"
+                    class="h-fit enabled:cursor-pointer p-2 border-2 border-black rounded-full enabled:hover:bg-secondary enabled:hover:border-secondary enabled:hover:text-white transition disabled:opacity-30 active:scale-95">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+
+                </button>
+            </div>
+        </section>
+
+        <!-- ? ENDORSEMENT SECTION -->
+        <section class="container mx-auto px-8 pt-14 pb-28">
+
+            <h2 class="font-heading text-center text-2xl font-semibold mb-22">
+                Thanks to our <br>
+                <i class="text-secondary">Marketplace</i> Endorsement
+            </h2>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-18 place-items-center">
+
+                <img src="assets/img/logos/Logo.png" alt="Logo"
+                    class="max-h-12 w-auto object-contain grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition" />
+
+                <img src="assets/img/logos/Logo-1.png" alt="Logo 1"
+                    class="max-h-12 w-auto object-contain grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition" />
+
+                <img src="assets/img/logos/Logo-2.png" alt="Logo 2"
+                    class="max-h-12 w-auto object-contain grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition" />
+
+                <img src="assets/img/logos/Logo-3.png" alt="Logo 3"
+                    class="max-h-12 w-auto object-contain grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition" />
+
+                <img src="assets/img/logos/Logo-4.png" alt="Logo 4"
+                    class="max-h-12 w-auto object-contain grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition" />
+
+                <img src="assets/img/logos/Logo.png" alt="Logo"
+                    class="max-h-12 w-auto object-contain grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition" />
+
+                <img src="assets/img/logos/Logo-1.png" alt="Logo 1"
+                    class="max-h-12 w-auto object-contain grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition" />
+
+                <img src="assets/img/logos/Logo-2.png" alt="Logo 2"
+                    class="max-h-12 w-auto object-contain grayscale brightness-90 hover:brightness-100 hover:grayscale-0 transition" />
+            </div>
+
+        </section>
+
+        <!-- ? BIG LOGO SECTION -->
+        <section class="bg-cst-black">
+            <div class="container mx-auto pt-14 pb-6">
+                <h2
+                    class="font-heading text-center uppercase text-5xl sm:text-8xl lg:text-9xl font-bold text-white italic">
+                    <span class="text-primary">-</span> athlix <span class="text-primary">-</span>
+                </h2>
+            </div>
+        </section>
+
+    </main>
+
+    <footer data-include="footer.html"></footer>
 </body>
 
 </html>
