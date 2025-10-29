@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     await loadPartials();
 });
 
-// ?
-// ?  INFIITE LOGO SLIDER ANIMATION
-// ?
+// *
+// *  INFINITE LOGO SLIDER ANIMATION
+// *
 
 const sliderElements = document.querySelectorAll('.animate-scroll');
 
@@ -32,9 +32,9 @@ sliderElements.forEach(el => {
 });
 
 
-// ?
-// ?  HORIZONTAL PARALLAX SCROLL ANIMATION
-// ?
+// *
+// *  HORIZONTAL PARALLAX SCROLL ANIMATION
+// *
 
 // content duplication
 const scrollParallaxElements = document.querySelectorAll("[data-scroll-parallax]");
@@ -79,9 +79,9 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ?
-// ?  FAQ BUTTON FUNCTIONALITY
-// ?
+// *
+// *  FAQ BUTTON FUNCTIONALITY
+// *
 const faqBtn = document.querySelectorAll('.faq-btn');
 
 toggleFaq(faqBtn[0]);
@@ -118,6 +118,124 @@ function toggleFaq(button) {
 faqBtn.forEach(btn => {
     btn.addEventListener('click', toggleFaq);
 });
+
+
+// *
+// *  SLIDER FUNCTIONALITY FUNCTIONS
+// *
+
+let itemsPerView = 1;
+
+function calculateItemsPerView() {
+    const width = window.innerWidth;
+    if (width >= 1280) return 4; // xl
+    if (width >= 1024) return 3; // lg
+    if (width >= 640) return 2;  // sm
+    return 1;
+}
+
+function updateSlider(item, track, index, indicator = null) {
+    itemsPerView = calculateItemsPerView();
+    const maxIndex = item.length - itemsPerView;
+
+    // Ensure index is within bounds
+    if (index > maxIndex) index = maxIndex;
+    if (maxIndex < 0) index = 0;
+
+    // Calculate translation
+    const itemWidth = item[0].offsetWidth;
+    const gap = 20;
+    const translateAmount = index * (itemWidth + gap);
+
+    track.style.transform = `translateX(-${translateAmount}px)`;
+
+    testimonialPrevBtn.disabled = index === 0;
+    testimonialNextBtn.disabled = index >= maxIndex;
+
+    updateIndicators(item, track, index, indicator);
+}
+
+function updateIndicators(item, track, index, indicator) {
+    if (!indicator) return;
+
+    indicator.innerHTML = '';
+    const maxIndex = item.length - itemsPerView;
+
+    for (let i = 0; i <= maxIndex; i++) {
+        const dot = document.createElement('button');
+        dot.className = `w-2 h-2 rounded-full transition-all ${i === index ? 'bg-secondary w-6' : 'bg-gray-300'
+            }`;
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlider(item, track, index);
+        });
+        indicators.appendChild(dot);
+    }
+}
+
+
+// *
+// *  SLIDER FUNCTIONALITY
+// *
+
+//? For testimonial section
+const testimonialTrack = document.getElementById('testimonialTrack');
+const testimonialPrevBtn = document.getElementById('prevBtnTestimonial');
+const testimonialNextBtn = document.getElementById('nextBtnTestimonial');
+const testimonialItem = testimonialTrack.children;
+let currentTestimonialIndex = 0;
+
+testimonialPrevBtn.addEventListener('click', () => {
+    if (currentTestimonialIndex > 0) {
+        currentTestimonialIndex--;
+        updateSlider(testimonialItem, testimonialTrack, currentTestimonialIndex);
+    }
+});
+
+testimonialNextBtn.addEventListener('click', () => {
+    const maxIndex = testimonialItem.length - itemsPerView;
+    if (currentTestimonialIndex < maxIndex) {
+        currentTestimonialIndex++;
+        updateSlider(testimonialItem, testimonialTrack, currentTestimonialIndex);
+    }
+});
+
+//? For venue booking section
+// const track = document.getElementById('sliderTrack');
+// const prevBtn = document.getElementById('prevBtn');
+// const nextBtn = document.getElementById('nextBtn');
+// const indicators = document.getElementById('indicators');
+// const items = track.children;
+// let currentFieldIndex = 0;
+
+// prevBtn.addEventListener('click', () => {
+//     if (currentIndex > 0) {
+//         currentIndex--;
+//         updateSlider();
+//     }
+// });
+
+// nextBtn.addEventListener('click', () => {
+//     const maxIndex = items.length - itemsPerView;
+//     if (currentIndex < maxIndex) {
+//         currentIndex++;
+//         updateSlider();
+//     }
+// });
+
+
+// Handle resize
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        updateSlider(testimonialItem, testimonialTrack, currentTestimonialIndex);
+        // updateSlider()
+    }, 100);
+});
+
+updateSlider(testimonialItem, testimonialTrack, currentTestimonialIndex);
+
 
 
 
