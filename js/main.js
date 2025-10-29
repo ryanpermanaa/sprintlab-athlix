@@ -109,7 +109,7 @@ function updateIndicators(item, track, index, indicator) {
 
 //? TEMPORARY CODE ==========================
 if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual'; // or 'auto'
+    history.scrollRestoration = 'auto'; // or 'auto'
 }
 
 document.addEventListener("DOMContentLoaded", () => {

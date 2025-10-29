@@ -36,8 +36,642 @@
 
     <header data-include="navbar.html"></header>
 
-    <main class="min-h-screen bg-gray-600 pt-20">
-        <h1>Your Content Here</h1>
+    <main class="min-h-screen">
+
+        <!-- ? HEADER / BANNER SECTION -->
+        <section class="relative pt-25 isolate overflow-visible">
+
+            <!-- decoration -->
+            <img class="absolute top-0 h-30 w-screen -z-10 object-cover" src="assets/decorations/bg-circle-mosh.png"
+                alt="" />
+
+            <!-- bg -->
+            <div class="absolute inset-x-0 top-0 h-3/4 bg-cst-black -z-20"></div>
+
+            <!-- banner -->
+            <div class="container mx-auto px-8">
+                <a href="#" class="">
+                    <img class="rounded-xl w-full h-70 lg:h-90 object-cover object-left md:object-center shadow-xl"
+                        src="assets/img/marketplace-banner.png" alt="Marketplace Banner" />
+                </a>
+            </div>
+
+        </section>
+
+        <!-- ? CATEGORIES SECTION -->
+        <section class="container mx-auto px-8 py-12">
+
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="font-heading text-2xl md:text-3xl font-semibold">Categories</h2>
+
+                <a href="#"
+                    class="flex items-center gap-3 font-display font-medium text-base border-2 border-black rounded-full w-fit py-2 px-4 hover:bg-black hover:text-white transition">
+                    View More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Categories cards -->
+            <div class="grid gap-3 sm:gap-4 md:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-bottom -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/yellow-jersey.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Jerseys
+                    </h3>
+                </a>
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-center -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/tennis-racket.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Shorts
+                    </h3>
+                </a>
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-center -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/bag-on-a-field.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Tracksuits
+                    </h3>
+                </a>
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-center -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/steel-bottle.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Hoodies
+                    </h3>
+                </a>
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-center -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/yellow-jersey.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Shoes
+                    </h3>
+                </a>
+            </div>
+
+
+        </section>
+
+        <!-- ? PRODUCT LISTS SECTION -->
+        <section class="container mx-auto px-8 pb-12">
+
+            <!-- banner -->
+            <a href="#" class="block rounded-md shadow-xl mb-14">
+                <img class="w-full object-cover object-left-top" src="assets/img/marketplace-banner2.png"
+                    alt="Marketplace Banner" />
+            </a>
+
+            <!-- ? sports clothing -->
+            <div class="flex flex-wrap justify-between gap-4 items-center mb-6">
+                <h2 class="font-heading text-2xl md:text-3xl font-semibold">Sports clothing</h2>
+                <a href="#"
+                    class="flex items-center gap-3 font-display font-medium text-base border-2 border-black rounded-full w-fit py-2 px-4 hover:bg-black hover:text-white transition">
+                    View More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- product list cards -->
+            <div class="grid gap-3 sm:gap-4 md:gap-5 grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 mb-14">
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-4 px-2 py-1 font-display rounded-sm text-sm font-bold bg-primary">Best
+                            Seller</span>
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/yellow-jersey.jpg" alt="">
+                    </div>
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">Football
+                                Jersey</p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.8
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">Nike
+                            Dri-FIT Academy Pro Jersey</h3>
+                        <p class="font-display font-bold text-secondary text-xl">Rp 329.000</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/yellow-jersey.jpg" alt="">
+                    </div>
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">Training
+                                Wear</p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.6
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">Adidas
+                            Tiro 24 Training Top</h3>
+                        <p class="font-display font-bold text-secondary text-xl">Rp 279.000</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-4 px-2 py-1 font-display rounded-sm text-sm font-bold bg-primary">Best
+                            Seller</span>
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/yellow-jersey.jpg" alt="">
+                    </div>
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">Basketball
+                                Apparel</p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.9
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">Under
+                            Armour Basketball Tank</h3>
+                        <p class="font-display font-bold text-secondary text-xl">Rp 359.000</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="hidden lg:block group rounded-lg transition">
+                    <div class="relative">
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/yellow-jersey.jpg" alt="">
+                    </div>
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">Running
+                                Gear</p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.7
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-display line-clamp-1 font-semibold mb-2 group-hover:underline">Puma
+                            DryCELL Running Shirt</h3>
+                        <p class="font-display font-bold text-secondary text-xl">Rp 310.000</p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="hidden lg:block group rounded-lg transition">
+                    <div class="relative">
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/yellow-jersey.jpg" alt="">
+                    </div>
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">Tennis
+                                Apparel</p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.4
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-display line-clamp-1 font-semibold mb-2 group-hover:underline">Lacoste
+                            Performance Polo</h3>
+                        <p class="font-display font-bold text-secondary text-xl">Rp 499.000</p>
+                    </div>
+                </a>
+            </div>
+
+
+
+
+            <!-- ? 2 column banner -->
+            <div class="flex flex-wrap gap-4 rounded-md min-h-75 mb-14">
+                <a href="#" class="relative flex-1 overflow-hidden">
+                    <img class="absolute w-full h-full object-cover object-center rounded-xl"
+                        src="assets/img/marketplace-banner3.png" alt="Marketplace Banner" />
+                </a>
+                <a href="#" class="relative flex-1 overflow-hidden">
+                    <img class="absolute w-full h-full object-cover object-center rounded-xl"
+                        src="assets/img/marketplace-banner4.png" alt="Marketplace Banner" />
+                </a>
+            </div>
+
+            <!-- ? lifestyle & accessories -->
+            <div class="flex flex-wrap justify-between gap-4 items-center mb-6">
+                <h2 class="font-heading text-2xl md:text-3xl font-semibold">Lifestyle & Accessories</h2>
+                <a href="#"
+                    class="flex items-center gap-3 font-display font-medium text-base border-2 border-black rounded-full w-fit py-2 px-4 hover:bg-black hover:text-white transition">
+                    View More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- product list cards -->
+            <div class="grid gap-3 sm:gap-4 md:gap-5 grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 mb-14">
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-4 px-2 py-1 font-display rounded-sm text-sm font-bold bg-primary">Best
+                            Seller</span>
+
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/bag-on-a-field.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Accessories
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Sports Bag - LogoIpsum
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/bag-on-a-field.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Accessories
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Sports Bag - LogoIpsum
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/bag-on-a-field.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Accessories
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Sports Bag - LogoIpsum
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="hidden md:block group rounded-lg transition">
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-4 px-2 py-1 font-display rounded-sm text-sm font-bold bg-primary">Best
+                            Seller</span>
+
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/bag-on-a-field.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Accessories
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Sports Bag - LogoIpsum
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="hidden md:block group rounded-lg transition">
+                    <div class="relative">
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/bag-on-a-field.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Accessories
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Sports Bag - LogoIpsum
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- ? merchandise -->
+            <div class="flex flex-wrap justify-between gap-4 items-center mb-6">
+                <h2 class="font-heading text-2xl md:text-3xl font-semibold">Merchandise</h2>
+                <a href="#"
+                    class="flex items-center gap-3 font-display font-medium text-base border-2 border-black rounded-full w-fit py-2 px-4 hover:bg-black hover:text-white transition">
+                    View More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- product list cards -->
+            <div class="grid gap-3 sm:gap-4 md:gap-5 grid-cols-1 sm:grid-cols-3 lg:grid-cols-5">
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-4 px-2 py-1 font-display rounded-sm text-sm font-bold bg-primary">Best
+                            Seller</span>
+
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/steel-bottle.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Merchandise
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Steel bottle 2K25
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/steel-bottle.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Merchandise
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Steel bottle 2K25
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="group rounded-lg transition">
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-4 px-2 py-1 font-display rounded-sm text-sm font-bold bg-primary">Best
+                            Seller</span>
+
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/steel-bottle.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Merchandise
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Steel bottle 2K25
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="hidden md:block group rounded-lg transition">
+                    <div class="relative">
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/steel-bottle.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Merchandise
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Steel bottle 2K25
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+                <a href="product-detail.html" class="hidden md:block group rounded-lg transition">
+                    <div class="relative">
+                        <span
+                            class="absolute left-3 top-4 px-2 py-1 font-display rounded-sm text-sm font-bold bg-primary">Best
+                            Seller</span>
+
+                        <img class="aspect-[6/7] object-cover object-center w-full rounded-lg"
+                            src="assets/img/products/steel-bottle.jpg" alt="">
+                    </div>
+
+                    <div class="mt-2">
+                        <div class="flex justify-between">
+                            <p class="flex items-center gap-2 font-display font-medium text-sm tracking-wide">
+                                Merchandise
+                            </p>
+                            <span class="flex items-center gap-1 font-display font-bold text-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-5 text-yellow-500">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                4.5
+                            </span>
+                        </div>
+                        <h3 class="text-xl line-clamp-1 font-display font-semibold mb-2 group-hover:underline">
+                            Steel bottle 2K25
+                        </h3>
+                        <p class="font-display font-bold text-secondary text-xl">
+                            Rp 334.000
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- ? CTA BANNER SECTION -->
+        <section
+            class="bg-secondary container mx-auto md:max-h-65 rounded-md flex flex-col md:flex-row justify-center items-center gap-8 px-8 mt-14 lg:mt-22 lg:mb-12">
+
+            <div class="text-white pt-12 pb-0 md:py-12">
+                <h2 class="font-display font-bold text-3xl leading-snug max-w-90 mb-8">
+                    Upgrade Your Workout Style — Shop Now & Stay Confident!
+                </h2>
+                <a href="#"
+                    class="flex items-center gap-3 font-display font-semibold text-base bg-white text-black rounded-full w-fit py-2 px-4 hover:bg-primary transition">
+                    Contact Now
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </div>
+
+            <img class="relative top-0 md:-top-3 lg:-top-12 md:w-80 lg:w-100"
+                src="assets/img/marketplace-girl-with-bag.png" alt="">
+
+        </section>
+
     </main>
 
     <footer data-include="footer.html"></footer>
