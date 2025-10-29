@@ -26,13 +26,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     // *
     const navbarElement = document.getElementById('navbar');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbarElement.classList.add('scrolled');
-        } else {
-            navbarElement.classList.remove('scrolled');
-        }
-    });
+    if (navbarElement) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbarElement.classList.add('scrolled');
+            } else {
+                navbarElement.classList.remove('scrolled');
+            }
+        });
+    }
 });
 
 // *
@@ -117,8 +119,3 @@ document.addEventListener("DOMContentLoaded", () => {
         sessionStorage.removeItem("scrollPos");
     }
 });
-
-window.addEventListener("beforeunload", () => {
-    sessionStorage.setItem("scrollPos", window.scrollY);
-});
-//? TERMPORARY CODE ==========================
