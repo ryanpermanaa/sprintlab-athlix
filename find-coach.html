@@ -25,6 +25,10 @@
             --font-display: 'Urbanist', sans-serif;
             --font-body: 'Poppins', sans-serif;
         }
+
+        /* * {
+            border: red 1px solid;
+        } */
     </style>
 
     <!-- ? Vanilla JS -->
@@ -56,8 +60,10 @@
 
         <!-- Trainer Recommendation -->
         <section class="relative container mx-auto px-4 md:px-8 mb-20">
-            <img class="absolute -top-36 -right-20 w-[550px] -z-10" src="assets/decorations/line-rectangle-pattern.png"
-                alt="">
+            <div class="w-full h-fit overflow-hidden">
+                <img class="absolute -top-36 right-0 w-[550px] -z-10"
+                    src="assets/decorations/line-rectangle-pattern.png" alt="">
+            </div>
             <h2 class="text-3xl md:text-4xl font-semibold mb-8">Let's train with a <br><span
                     class="text-secondary">professional</span> trainer</h2>
             <div class="flex h-[550px] gap-5">
@@ -90,7 +96,7 @@
                                 </svg>
                             </div>
                         </div>
-                        <div class="flex gap-5 bg-cst-black px-4 py-3 rounded-br-3xl">
+                        <div class="flex gap-5 bg-cst-black ps-4 pe-6 py-4.5 rounded-br-3xl">
                             <div class="text-black p-3 rounded-full bg-primary cursor-pointer">
                                 <svg class="w-6 h-6" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -129,7 +135,7 @@
             <!-- Search -->
             <div class="flex justify-end gap-4 font-display">
                 <div class="flex gap-2 px-4 py-3 border rounded-full items-center">
-                    <input class="focus:outline-none w-[15rem]" type="text" placeholder="Search a venue you want...">
+                    <input class="focus:outline-none md:w-[15rem]" type="text" placeholder="Search a coach...">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21.0002 21L16.6602 16.66" stroke="#6A7282" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
@@ -151,17 +157,17 @@
 
             <!-- Divider -->
             <div class="w-full flex justify-center">
-                <div class="bg-gray-400 h-0.5 w-[90%]"></div>
+                <div class="bg-gray-400 h-0.5 w-[98%]"></div>
             </div>
 
             <!-- Card Coach -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 *:cursor-pointer">
+            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 *:cursor-pointer">
                 <div class="flex flex-col">
-                    <div class="w-full h-[400px] rounded-3xl overflow-hidden">
+                    <div class="w-full h-[300px] rounded-3xl overflow-hidden">
                         <img class="w-full h-full object-cover" src="assets/img/persons/person1.jpg" alt="">
                     </div>
                     <div class="flex flex-col gap-1 font-body py-4">
-                        <h3 class="text-base font-semibold">James Worky Company</h3>
+                        <h3 class="text-sm md:text-base font-semibold">James Worky Company</h3>
                         <p class="text-xs">Coach Pro Liga Basket Ball</p>
                     </div>
                     <div class="flex items-center justify-between">
@@ -193,10 +199,10 @@
                                         fill="#FDC700" />
                                 </svg>
                             </div>
-                            <p class="text-sm font-body">5.0</p>
+                            <p class="text-sm font-body font-semibold">5.0</p>
                         </div>
                         <div
-                            class="ps-4 mb-2 w-fit flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
+                            class="hidden ps-4 mb-2 w-fit md:flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
                             <div class="text-cst-black p-1 bg-white rounded-full">
                                 <svg class="w-5 h-5" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -222,11 +228,11 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="w-full h-[400px] rounded-3xl overflow-hidden">
+                    <div class="w-full h-[300px] rounded-3xl overflow-hidden">
                         <img class="w-full h-full object-cover" src="assets/img/persons/person1.jpg" alt="">
                     </div>
                     <div class="flex flex-col gap-1 font-body py-4">
-                        <h3 class="text-base font-semibold">James Worky Company</h3>
+                        <h3 class="text-sm md:text-base font-semibold">James Worky Company</h3>
                         <p class="text-xs">Coach Pro Liga Basket Ball</p>
                     </div>
                     <div class="flex items-center justify-between">
@@ -258,10 +264,10 @@
                                         fill="#FDC700" />
                                 </svg>
                             </div>
-                            <p class="text-sm font-body">5.0</p>
+                            <p class="text-sm font-body font-semibold">5.0</p>
                         </div>
                         <div
-                            class="ps-4 mb-2 w-fit flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
+                            class="hidden ps-4 mb-2 w-fit md:flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
                             <div class="text-cst-black p-1 bg-white rounded-full">
                                 <svg class="w-5 h-5" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -287,11 +293,11 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="w-full h-[400px] rounded-3xl overflow-hidden">
+                    <div class="w-full h-[300px] rounded-3xl overflow-hidden">
                         <img class="w-full h-full object-cover" src="assets/img/persons/person1.jpg" alt="">
                     </div>
                     <div class="flex flex-col gap-1 font-body py-4">
-                        <h3 class="text-base font-semibold">James Worky Company</h3>
+                        <h3 class="text-sm md:text-base font-semibold">James Worky Company</h3>
                         <p class="text-xs">Coach Pro Liga Basket Ball</p>
                     </div>
                     <div class="flex items-center justify-between">
@@ -323,10 +329,10 @@
                                         fill="#FDC700" />
                                 </svg>
                             </div>
-                            <p class="text-sm font-body">5.0</p>
+                            <p class="text-sm font-body font-semibold">5.0</p>
                         </div>
                         <div
-                            class="ps-4 mb-2 w-fit flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
+                            class="hidden ps-4 mb-2 w-fit md:flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
                             <div class="text-cst-black p-1 bg-white rounded-full">
                                 <svg class="w-5 h-5" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -352,11 +358,11 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="w-full h-[400px] rounded-3xl overflow-hidden">
+                    <div class="w-full h-[300px] rounded-3xl overflow-hidden">
                         <img class="w-full h-full object-cover" src="assets/img/persons/person1.jpg" alt="">
                     </div>
                     <div class="flex flex-col gap-1 font-body py-4">
-                        <h3 class="text-base font-semibold">James Worky Company</h3>
+                        <h3 class="text-sm md:text-base font-semibold">James Worky Company</h3>
                         <p class="text-xs">Coach Pro Liga Basket Ball</p>
                     </div>
                     <div class="flex items-center justify-between">
@@ -388,10 +394,10 @@
                                         fill="#FDC700" />
                                 </svg>
                             </div>
-                            <p class="text-sm font-body">5.0</p>
+                            <p class="text-sm font-body font-semibold">5.0</p>
                         </div>
                         <div
-                            class="ps-4 mb-2 w-fit flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
+                            class="hidden ps-4 mb-2 w-fit md:flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
                             <div class="text-cst-black p-1 bg-white rounded-full">
                                 <svg class="w-5 h-5" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -417,11 +423,11 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="w-full h-[400px] rounded-3xl overflow-hidden">
+                    <div class="w-full h-[300px] rounded-3xl overflow-hidden">
                         <img class="w-full h-full object-cover" src="assets/img/persons/person1.jpg" alt="">
                     </div>
                     <div class="flex flex-col gap-1 font-body py-4">
-                        <h3 class="text-base font-semibold">James Worky Company</h3>
+                        <h3 class="text-sm md:text-base font-semibold">James Worky Company</h3>
                         <p class="text-xs">Coach Pro Liga Basket Ball</p>
                     </div>
                     <div class="flex items-center justify-between">
@@ -453,10 +459,10 @@
                                         fill="#FDC700" />
                                 </svg>
                             </div>
-                            <p class="text-sm font-body">5.0</p>
+                            <p class="text-sm font-body font-semibold">5.0</p>
                         </div>
                         <div
-                            class="ps-4 mb-2 w-fit flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
+                            class="hidden ps-4 mb-2 w-fit md:flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
                             <div class="text-cst-black p-1 bg-white rounded-full">
                                 <svg class="w-5 h-5" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -482,11 +488,11 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="w-full h-[400px] rounded-3xl overflow-hidden">
+                    <div class="w-full h-[300px] rounded-3xl overflow-hidden">
                         <img class="w-full h-full object-cover" src="assets/img/persons/person1.jpg" alt="">
                     </div>
                     <div class="flex flex-col gap-1 font-body py-4">
-                        <h3 class="text-base font-semibold">James Worky Company</h3>
+                        <h3 class="text-sm md:text-base font-semibold">James Worky Company</h3>
                         <p class="text-xs">Coach Pro Liga Basket Ball</p>
                     </div>
                     <div class="flex items-center justify-between">
@@ -518,10 +524,10 @@
                                         fill="#FDC700" />
                                 </svg>
                             </div>
-                            <p class="text-sm font-body">5.0</p>
+                            <p class="text-sm font-body font-semibold">5.0</p>
                         </div>
                         <div
-                            class="ps-4 mb-2 w-fit flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
+                            class="hidden ps-4 mb-2 w-fit md:flex gap-2 *:flex *:justify-center *:items-center *:hover:bg-gray-300 *:cursor-pointer">
                             <div class="text-cst-black p-1 bg-white rounded-full">
                                 <svg class="w-5 h-5" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -549,30 +555,12 @@
             </div>
 
             <!-- Pagination -->
-            <div class="flex justify-center gap-2 *:p-3 *:w-8 *:md:w-12 *:grid *:place-content-center *:rounded-md *:hover:bg-gray-200 *:bg-gray-100 *:text-sm *:font-display *:hover:cursor-pointer *:font-medium text-gray-500">
-                <a>
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18.5L9 12.5L15 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
-                <a>1</a>
-                <a>2</a>
-                <a>3</a>
-                <div>
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.5 12.5C7.5 13.0304 7.28929 13.5391 6.91421 13.9142C6.53914 14.2893 6.03043 14.5 5.5 14.5C4.96957 14.5 4.46086 14.2893 4.08579 13.9142C3.71071 13.5391 3.5 13.0304 3.5 12.5C3.5 11.9696 3.71071 11.4609 4.08579 11.0858C4.46086 10.7107 4.96957 10.5 5.5 10.5C6.03043 10.5 6.53914 10.7107 6.91421 11.0858C7.28929 11.4609 7.5 11.9696 7.5 12.5ZM14.5 12.5C14.5 13.0304 14.2893 13.5391 13.9142 13.9142C13.5391 14.2893 13.0304 14.5 12.5 14.5C11.9696 14.5 11.4609 14.2893 11.0858 13.9142C10.7107 13.5391 10.5 13.0304 10.5 12.5C10.5 11.9696 10.7107 11.4609 11.0858 11.0858C11.4609 10.7107 11.9696 10.5 12.5 10.5C13.0304 10.5 13.5391 10.7107 13.9142 11.0858C14.2893 11.4609 14.5 11.9696 14.5 12.5ZM21.5 12.5C21.5 13.0304 21.2893 13.5391 20.9142 13.9142C20.5391 14.2893 20.0304 14.5 19.5 14.5C18.9696 14.5 18.4609 14.2893 18.0858 13.9142C17.7107 13.5391 17.5 13.0304 17.5 12.5C17.5 11.9696 17.7107 11.4609 18.0858 11.0858C18.4609 10.7107 18.9696 10.5 19.5 10.5C20.0304 10.5 20.5391 10.7107 20.9142 11.0858C21.2893 11.4609 21.5 11.9696 21.5 12.5Z"
-                            fill="currentColor" />
-                    </svg>
-                </div>
-                <a>99</a>
-                <a>
-                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 6.5L16 12.5L10 18.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </a>
+            <div class="flex justify-center gap-2 mt-5 *:cursor-pointer *:hover:bg-gray-300">
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">Prev</button>
+                <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">1</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">2</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">3</button>
+                <button class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">Next</button>
             </div>
         </section>
     </main>
