@@ -100,7 +100,10 @@ let currentTestimonialIndex = 0;
 testimonialPrevBtn.addEventListener('click', () => {
     if (currentTestimonialIndex > 0) {
         currentTestimonialIndex--;
-        updateSlider(testimonialItems, testimonialTrack, currentTestimonialIndex);
+        updateSlider(
+            testimonialItems, testimonialTrack, currentTestimonialIndex, null,
+            [testimonialPrevBtn, testimonialNextBtn]
+        );
     }
 });
 
@@ -108,17 +111,26 @@ testimonialNextBtn.addEventListener('click', () => {
     const maxIndex = testimonialItems.length - itemsPerView;
     if (currentTestimonialIndex < maxIndex) {
         currentTestimonialIndex++;
-        updateSlider(testimonialItems, testimonialTrack, currentTestimonialIndex);
+        updateSlider(
+            testimonialItems, testimonialTrack, currentTestimonialIndex, null,
+            [testimonialPrevBtn, testimonialNextBtn]
+        );
     }
 });
 
-updateSlider(testimonialItems, testimonialTrack, currentTestimonialIndex);
+updateSlider(
+    testimonialItems, testimonialTrack, currentTestimonialIndex, null,
+    [testimonialPrevBtn, testimonialNextBtn]
+);
 
 // Handle resize
 let resizeTimer;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(() => {
-        updateSlider(testimonialItems, testimonialTrack, currentTestimonialIndex);
+        updateSlider(
+            testimonialItems, testimonialTrack, currentTestimonialIndex, null,
+            [testimonialPrevBtn, testimonialNextBtn]
+        );
     }, 100);
 });
