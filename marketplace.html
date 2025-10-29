@@ -36,8 +36,89 @@
 
     <header data-include="navbar.html"></header>
 
-    <main class="min-h-screen bg-gray-600 pt-20">
-        <h1>Your Content Here</h1>
+    <main class="min-h-screen">
+
+        <!-- ? MARKETPLACE SECTION -->
+        <section class="relative bg-cst-black pt-10 isolate overflow-visible max-h-100">
+            <!-- decoration -->
+            <img class="absolute top-0 h-30 w-screen -z-10 object-cover" src="assets/decorations/bg-circle-mosh.png"
+                alt="" />
+
+            <!-- banner -->
+            <div class="container mx-auto px-6 md:px-8">
+                <div
+                    class="relative rounded-md overflow-hidden shadow-xl translate-y-10 sm:translate-y-14 md:translate-y-16 lg:translate-y-20">
+                    <img class="w-full h-60 sm:h-72 md:h-96 lg:h-[30rem] object-cover object-left-top"
+                        src="assets/marketplace-banner.png" alt="Marketplace Banner" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ? CATEGORIES SECTION -->
+        <section class="container mx-auto px-6 md:px-8 pt-20 sm:pt-25 md:pt-35 lg:pt-64 pb-12">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="font-heading text-2xl md:text-4xl font-semibold">Categories</h2>
+                <a href="#"
+                    class="flex items-center gap-3 font-display font-medium text-base border-2 border-black rounded-full w-fit py-2 px-4 hover:bg-black hover:text-white transition">
+                    View More
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Categories cards -->
+            <div class="grid gap-3 sm:gap-4 md:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-bottom -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/yellow-jersey.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Sports clothing
+                    </h3>
+                </a>
+
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-center -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/tennis-racket.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Sports equipment
+                    </h3>
+                </a>
+
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-center -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/bag-on-a-field.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Lifestyle & Accessories
+                    </h3>
+                </a>
+
+                <a href="#" class="relative p-4 rounded-md aspect-[4/5] flex items-end overflow-hidden group">
+                    <img class="absolute inset-0 object-cover object-center -z-10 transition-transform group-hover:scale-105"
+                        src="assets/img/products/steel-bottle.jpg" alt="">
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none">
+                    </div>
+                    <h3 class="font-display text-lg font-semibold text-white relative z-10">
+                        Merchandise
+                    </h3>
+                </a>
+            </div>
+
+        </section>
+
+
     </main>
 
     <footer data-include="footer.html"></footer>
