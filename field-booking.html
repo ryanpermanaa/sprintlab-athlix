@@ -29,6 +29,7 @@
 
     <!-- ? Vanilla JS -->
     <script src="/js/main.js" defer></script>
+    <script src="/js/field-booking.js" defer></script>
 
 </head>
 
@@ -79,7 +80,7 @@
                 </div>
 
                 <div class="flex items-end ml-auto gap-3">
-                    <button id="prevBtn"
+                    <button id="venuePrevBtn"
                         class="h-fit enabled:cursor-pointer p-2 border-2 border-black rounded-full enabled:hover:bg-black enabled:hover:text-white transition disabled:opacity-30 active:scale-95">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" class="size-6">
@@ -88,7 +89,7 @@
                         </svg>
                     </button>
 
-                    <button id="nextBtn"
+                    <button id="venueNextBtn"
                         class="h-fit enabled:cursor-pointer p-2 border-2 border-black rounded-full enabled:hover:bg-black enabled:hover:text-white transition disabled:opacity-30 active:scale-95">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                             stroke="currentColor" class="size-6">
@@ -104,41 +105,41 @@
             <div class="relative">
 
                 <style>
-                    .slider-track {
+                    .venue-track {
                         transition: transform 0.3s ease-in-out;
                     }
 
-                    .slider-item {
+                    .venue-item {
                         width: 100%;
-                        margin-right: 5px;
+                        /* margin-right: 5px; */
                     }
 
                     @media (min-width: 640px) {
-                        .slider-item {
-                            width: calc(50% - 16px);
+                        .venue-item {
+                            width: calc(50% - 8px);
                         }
                     }
 
                     @media (min-width: 1024px) {
-                        .slider-item {
+                        .venue-item {
                             width: calc(33.333% - 16px);
                         }
                     }
 
                     @media (min-width: 1280px) {
-                        .slider-item {
-                            width: calc(25% - 16px);
+                        .venue-item {
+                            width: calc(25% - 12px);
                         }
                     }
                 </style>
 
                 <!-- Slider Viewport -->
                 <div class="overflow-hidden rounded-md">
-                    <div id="sliderTrack" class="slider-track flex gap-4">
+                    <div id="venueTrack" class="venue-track flex gap-4">
 
                         <!-- Slide Items -->
                         <div
-                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            class="flex-shrink-0 venue-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
                             <img class="absolute inset-0 object-cover object-center -z-20"
                                 src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
                                 alt="">
@@ -163,7 +164,7 @@
                             </div>
                         </div>
                         <div
-                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            class="flex-shrink-0 venue-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
                             <img class="absolute inset-0 object-cover object-center -z-20"
                                 src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
                                 alt="">
@@ -188,7 +189,7 @@
                             </div>
                         </div>
                         <div
-                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            class="flex-shrink-0 venue-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
                             <img class="absolute inset-0 object-cover object-center -z-20"
                                 src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
                                 alt="">
@@ -213,7 +214,7 @@
                             </div>
                         </div>
                         <div
-                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            class="flex-shrink-0 venue-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
                             <img class="absolute inset-0 object-cover object-center -z-20"
                                 src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
                                 alt="">
@@ -238,7 +239,7 @@
                             </div>
                         </div>
                         <div
-                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            class="flex-shrink-0 venue-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
                             <img class="absolute inset-0 object-cover object-center -z-20"
                                 src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
                                 alt="">
@@ -263,7 +264,7 @@
                             </div>
                         </div>
                         <div
-                            class="flex-shrink-0 slider-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
+                            class="flex-shrink-0 venue-item group flex items-end relative aspect-square p-6 overflow-hidden text-white rounded-lg before:absolute before:inset-0 before:bg-black before:opacity-0 before:-z-10 hover:before:opacity-50 before:transition">
                             <img class="absolute inset-0 object-cover object-center -z-20"
                                 src="https://images.unsplash.com/photo-1605144884374-ecbb643615f6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=692"
                                 alt="">
@@ -291,7 +292,7 @@
                     </div>
                 </div>
 
-                <div id="indicators" class="flex justify-center gap-2 mt-6"></div>
+                <div id="venueIndicators" class="flex justify-center gap-2 mt-6"></div>
             </div>
 
         </section>
