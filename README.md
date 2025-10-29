@@ -49,7 +49,7 @@ You have two easy ways to experience the **Athlix** website:
 
 The website is fully hosted and instantly accessible via GitHub Pages:
 
-* **Link:** `link coming soon`
+* **Link:** https://athlix-rho.vercel.app/
 
 ### 2. 💻 Local Setup (Download Project)
 
